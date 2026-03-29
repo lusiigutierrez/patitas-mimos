@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado de Uñas y Patas | Patitas y Mimos</title>
+    <meta name="description" content="Guía para cortar uñas correctamente, cuidado de almohadillas y protección de patas de tu perro.">
+    <link rel="icon" type="image/png" href="logo-patitas-mimos-transparente.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --orange: #FFB74D;
+            --light-orange: #FFE0B2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-orange) 0%, #FFF9C4 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--orange);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .guide-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--orange);
+            margin: 2rem 0;
+        }
+
+        .guide-box h3 {
+            color: var(--orange);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            padding: 1rem 0 1rem 3rem;
+            position: relative;
+            color: var(--warm-brown);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            background: var(--orange);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .steps-list strong {
+            color: var(--deep-brown);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .care-card {
+            background: linear-gradient(135deg, var(--light-orange) 0%, white 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .care-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(255, 183, 77, 0.3);
+        }
+
+        .care-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .care-card h3 {
+            color: var(--orange);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .care-card p {
+            color: var(--warm-brown);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .care-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .care-card li {
+            padding: 0.3rem 0;
+            color: var(--warm-brown);
+        }
+
+        .care-card li::before {
+            content: "✓ ";
+            color: var(--orange);
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background: #FFEBEE;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #E57373;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #C62828;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .info-box {
+            background: var(--light-orange);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--orange);
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--pastel-pink) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--orange);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .guide-box {
+                padding: 1.5rem;
+            }
+
+            .care-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .care-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>💅 Uñas y Patas</h1>
+        <p>Guía para cortar uñas correctamente, cuidado de almohadillas y protección de patas</p>
+    </div>
+
+    <div class="content">
+        <!-- Por Qué Es Importante -->
+        <section class="section">
+            <div class="warning-box">
+                <h3>⚠️ Uñas Largas = Problemas Graves</h3>
+                <p>Las uñas demasiado largas causan:</p>
+                <ul>
+                    <li><strong>Dolor al caminar</strong> (como usar zapatos apretados todo el día)</li>
+                    <li><strong>Postura anormal</strong> → problemas articulares y de espalda</li>
+                    <li><strong>Uñas encarnadas</strong> que se clavan en almohadillas (¡muy doloroso!)</li>
+                    <li><strong>Fracturas de uñas</strong> al engancharse</li>
+                    <li><strong>Infecciones</strong> si se rompen</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Regla de oro:</strong> Si escuchas "clic clic" al caminar, están DEMASIADO largas.</p>
+            </div>
+        </section>
+
+        <!-- Guía de Corte -->
+        <section class="section">
+            <h2>✂️ Guía Paso a Paso: Cortar Uñas</h2>
+            
+            <div class="info-box">
+                <h3>📅 ¿Con Qué Frecuencia?</h3>
+                <p><strong>Perros activos (paseos en asfalto):</strong> Cada 3-4 semanas</p>
+                <p><strong>Perros poco activos o de interior:</strong> Cada 2-3 semanas</p>
+                <p><strong>Cachorros:</strong> Cada 1-2 semanas (uñas de aguja)</p>
+            </div>
+
+            <div class="guide-box">
+                <h3>Preparación y Acostumbramiento</h3>
+                <ol class="steps-list">
+                    <li>
+                        <strong>Acostumbra a tocar las patas (1-2 semanas antes)</strong>
+                        Toca y masajea patas diariamente. Presiona almohadillas suavemente. Premia con snack. Debe asociar patas = premio, no miedo.
+                    </li>
+                    <li>
+                        <strong>Introduce el cortaúñas</strong>
+                        Muéstrale la herramienta. Déjale olerla. Toca sus patas con ella (sin cortar). Premia. Que no sea algo aterrador.
+                    </li>
+                    <li>
+                        <strong>Simula el sonido</strong>
+                        Corta un spaghetti crudo cerca de él. Se acostumbra al "clic". Premia. El sonido puede asustarles la primera vez.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="guide-box">
+                <h3>Corte Seguro (Evitar el Vaso Sanguíneo)</h3>
+                <ol class="steps-list">
+                    <li>
+                        <strong>Identifica el "quick" (vaso sanguíneo)</strong>
+                        <strong>Uñas blancas:</strong> Se ve la parte rosa dentro. Corta ANTES de eso.<br>
+                        <strong>Uñas negras:</strong> Corta poco a poco. Si ves un punto blanco/gris en el centro del corte, PARA. Estás cerca del vaso.
+                    </li>
+                    <li>
+                        <strong>Sujeta la pata firmemente pero sin apretar</strong>
+                        Una mano sostiene la pata. Otra mano corta. Si forcejea mucho, para y prueba después. No luchas.
+                    </li>
+                    <li>
+                        <strong>Corta en ángulo de 45°</strong>
+                        Paralelo a la almohadilla, no perpendicular. Retira solo la punta curvada.
+                    </li>
+                    <li>
+                        <strong>Corta 1-2mm antes del quick</strong>
+                        Mejor quedarse corto que pasarse. Puedes cortar más en la próxima sesión.
+                    </li>
+                    <li>
+                        <strong>Una uña a la vez</strong>
+                        Corta, premia, siguiente uña. No apresures. Si se estresa, continúa mañana.
+                    </li>
+                    <li>
+                        <strong>NO OLVIDES las uñas de los espolones</strong>
+                        Están en la parte interior de las patas delanteras (y traseras en algunas razas). Crecen circulares y se clavan si no se cortan.
+                    </li>
+                    <li>
+                        <strong>Lima los bordes (opcional pero recomendado)</strong>
+                        Lima suave para que no se enganchen en alfombras o tu piel.
+                    </li>
+                    <li>
+                        <strong>Recompensa generosamente</strong>
+                        Snack favorito solo para corte de uñas. Asociación positiva = próxima vez más fácil.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>🩹 ¿Cortaste el Vaso? No Pasa Nada (Pero Duele)</h3>
+                <p><strong>Qué hacer:</strong></p>
+                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Mantén la calma (tu perro nota tu estrés)</li>
+                    <li>Aplica polvo hemostático O maicena O harina en la uña</li>
+                    <li>Presiona 1-2 minutos</li>
+                    <li>El sangrado para en 5-10 minutos</li>
+                    <li>Premia al perro (aunque hayas metido la pata)</li>
+                    <li>Espera 1 semana antes del próximo corte</li>
+                </ol>
+                <p style="margin-top: 1rem;"><strong>Importante:</strong> Le duele y se acordará. Más razón para ir poco a poco la próxima vez.</p>
+            </div>
+        </section>
+
+        <!-- Herramientas -->
+        <section class="section">
+            <h2>🛠️ Herramientas para Cortar Uñas</h2>
+            
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">✂️</div>
+                    <h3>Cortaúñas Tipo Tijera</h3>
+                    <p><strong>Mejor para:</strong> Perros pequeños y medianos, cachorros</p>
+                    <ul>
+                        <li>Más control y precisión</li>
+                        <li>Uñas finas-medianas</li>
+                        <li>Fácil de usar</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Safari, Millers Forge</p>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🔨</div>
+                    <h3>Cortaúñas Tipo Guillotina</h3>
+                    <p><strong>Mejor para:</strong> Perros medianos-grandes</p>
+                    <ul>
+                        <li>Corte limpio y rápido</li>
+                        <li>Uñas gruesas</li>
+                        <li>Requiere práctica</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Resco, JW Pet</p>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">⚡</div>
+                    <h3>Lima Eléctrica (Dremel)</h3>
+                    <p><strong>Mejor para:</strong> Perros que odian el cortaúñas</p>
+                    <ul>
+                        <li>Sin riesgo de cortar vaso</li>
+                        <li>Acaba suave (no engancha)</li>
+                        <li>Ruido puede asustar</li>
+                        <li>Más lento</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Dremel PawControl, Casfuy</p>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🩹</div>
+                    <h3>Polvo Hemostático</h3>
+                    <p><strong>IMPRESCINDIBLE</strong> por si cortas el vaso</p>
+                    <ul>
+                        <li>Para sangrado inmediato</li>
+                        <li>Alternativa: maicena o harina</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Kwik Stop</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuidado de Almohadillas -->
+        <section class="section">
+            <h2>🐾 Cuidado de Almohadillas</h2>
+            
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">🧴</div>
+                    <h3>Hidratación</h3>
+                    <p><strong>¿Cuándo?</strong> Almohadillas secas, agrietadas o ásperas</p>
+                    <ul>
+                        <li>Bálsamo para almohadillas</li>
+                        <li>Vaselina (sin fragancias)</li>
+                        <li>Aplica antes de dormir</li>
+                        <li>Masajea suavemente</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Musher's Secret, Paw Soother</p>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🧊</div>
+                    <h3>Protección Invierno</h3>
+                    <p><strong>Contra:</strong> Sal, hielo, frío extremo</p>
+                    <ul>
+                        <li>Botas protectoras (si las tolera)</li>
+                        <li>Bálsamo protector ANTES del paseo</li>
+                        <li>Lavar patas al volver (eliminar sal)</li>
+                        <li>Secar bien entre dedos</li>
+                    </ul>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">☀️</div>
+                    <h3>Protección Verano</h3>
+                    <p><strong>Asfalto caliente quema almohadillas</strong></p>
+                    <ul>
+                        <li>Pasea temprano/tarde</li>
+                        <li>Prueba asfalto con tu mano 5 segundos</li>
+                        <li>Si quema, quema a tu perro</li>
+                        <li>Césped o sombra mejor</li>
+                    </ul>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">✂️</div>
+                    <h3>Pelo Entre Almohadillas</h3>
+                    <p><strong>Recorta regularmente</strong></p>
+                    <ul>
+                        <li>Pelo largo acumula suciedad</li>
+                        <li>Causa resbalones en suelo liso</li>
+                        <li>Usa tijeras de punta roma</li>
+                        <li>¡Cuidado! Piel muy sensible</li>
+                    </ul>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🩹</div>
+                    <h3>Cortes y Heridas</h3>
+                    <p><strong>Primeros auxilios:</strong></p>
+                    <ul>
+                        <li>Limpia con agua tibia</li>
+                        <li>Desinfecta (clorhexidina)</li>
+                        <li>Venda si sangra mucho</li>
+                        <li>Vet si corte profundo</li>
+                        <li>Botín para evitar lamido</li>
+                    </ul>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🔍</div>
+                    <h3>Revisión Semanal</h3>
+                    <p><strong>Busca:</strong></p>
+                    <ul>
+                        <li>Grietas o cortes</li>
+                        <li>Objetos clavados</li>
+                        <li>Hinchazón o enrojecimiento</li>
+                        <li>Olor extraño (infección)</li>
+                        <li>Exceso de lamido (dolor)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🛁 Guía Completa de Higiene</h2>
+            <p>Descubre más cuidados esenciales para tu perrito</p>
+            <a href="bano.html" class="cta-btn">Ver Guía de Baño</a>
+            <a href="como-banar-perro.html" class="cta-btn">Leer Artículo Completo</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>

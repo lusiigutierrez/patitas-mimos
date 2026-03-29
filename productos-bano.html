@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Baño para Perros | Patitas y Mimos</title>
+    <meta name="description" content="Mejores champús según tipo de pelaje, productos hipoalergénicos y acondicionadores naturales recomendados para tu perro.">
+    <link rel="icon" type="image/png" href="logo-patitas-mimos-transparente.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --light-blue: #E3F2FD;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--soft-blue) 0%, var(--light-blue) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--baby-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--baby-blue);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(180, 212, 255, 0.3);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            color: var(--baby-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-card p {
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .product-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: var(--soft-blue);
+            color: var(--deep-brown);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .features-list li {
+            padding: 0.4rem 0;
+            color: var(--warm-brown);
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            color: var(--baby-blue);
+            font-weight: 700;
+        }
+
+        .info-box {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--baby-blue);
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--baby-blue);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--baby-blue) 0%, var(--pastel-pink) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--baby-blue);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .product-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>🧴 Productos de Baño</h1>
+        <p>Mejores champús, productos hipoalergénicos y acondicionadores naturales para cada tipo de pelaje</p>
+    </div>
+
+    <div class="content">
+        <!-- Champús por Tipo de Pelaje -->
+        <section class="section">
+            <h2>🧴 Champús por Tipo de Pelaje</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🐕</div>
+                    <h3>Pelo Corto</h3>
+                    <span class="product-badge">Beagle, Boxer, Dálmata</span>
+                    <p><strong>Champú limpiador básico</strong> con pH equilibrado (7.0-7.5)</p>
+                    <ul class="features-list">
+                        <li>Fórmula suave</li>
+                        <li>Sin acondicionador necesario</li>
+                        <li>Lavado rápido</li>
+                        <li>Marcas: Menforsan, Francodex</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🎀</div>
+                    <h3>Pelo Largo y Sedoso</h3>
+                    <span class="product-badge">Yorkshire, Shih Tzu, Maltés</span>
+                    <p><strong>Champú + acondicionador desenredante</strong> obligatorio</p>
+                    <ul class="features-list">
+                        <li>Hidratación intensa</li>
+                        <li>Proteínas de queratina</li>
+                        <li>Aceite de argán o jojoba</li>
+                        <li>Marcas: Artero, Oster, Isle of Dogs</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">☁️</div>
+                    <h3>Pelo Rizado/Lanoso</h3>
+                    <span class="product-badge">Caniche, Bichón</span>
+                    <p><strong>Champú texturizante</strong> + acondicionador volumen</p>
+                    <ul class="features-list">
+                        <li>Define rizos</li>
+                        <li>Evita apelmazamiento</li>
+                        <li>Ingredientes nutritivos</li>
+                        <li>Marcas: BioGroom, Animology</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🐺</div>
+                    <h3>Doble Capa Densa</h3>
+                    <span class="product-badge">Husky, Samoyedo</span>
+                    <p><strong>Champú penetrante profundo</strong></p>
+                    <ul class="features-list">
+                        <li>Llega a la subcapa</li>
+                        <li>Facilita deslanado</li>
+                        <li>No apelmaza</li>
+                        <li>Marcas: FURminator, The Coat Handler</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🦁</div>
+                    <h3>Pelo Duro/Áspero</h3>
+                    <span class="product-badge">Schnauzer, Terriers</span>
+                    <p><strong>Champú texturizante duro</strong></p>
+                    <ul class="features-list">
+                        <li>Mantiene textura áspera</li>
+                        <li>NO suaviza</li>
+                        <li>Limpieza profunda</li>
+                        <li>Marcas: Plush Puppy, Chris Christensen</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🐶</div>
+                    <h3>Pelo Corto Denso</h3>
+                    <span class="product-badge">Labrador, Golden</span>
+                    <p><strong>Champú desengrasante</strong> moderado</p>
+                    <ul class="features-list">
+                        <li>Control oleosidad</li>
+                        <li>Elimina subproductos</li>
+                        <li>Brillo natural</li>
+                        <li>Marcas: TropiClean, Earthbath</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Hipoalergénicos -->
+        <section class="section">
+            <h2>💚 Productos Hipoalergénicos</h2>
+            
+            <div class="info-box">
+                <h3>¿Cuándo usar productos hipoalergénicos?</h3>
+                <p>Para perros con piel sensible, alergias, dermatitis atópica, o que se rascan excesivamente después del baño.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🌿</div>
+                    <h3>Champú Hipoalergénico Puro</h3>
+                    <p><strong>Sin fragancias, colorantes ni parabenos</strong></p>
+                    <ul class="features-list">
+                        <li>Avena coloidal calmante</li>
+                        <li>Aloe vera hidratante</li>
+                        <li>pH neutro</li>
+                        <li>Marcas: Virbac, Allermyl, Vetericyn</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🧪</div>
+                    <h3>Champú Dermatológico</h3>
+                    <p><strong>Recomendado por veterinarios</strong></p>
+                    <ul class="features-list">
+                        <li>Clorhexidina 2-4%</li>
+                        <li>Antibacteriano/antifúngico</li>
+                        <li>Para dermatitis</li>
+                        <li>Marcas: Douxo, Malaseb, Dermcare</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🥥</div>
+                    <h3>Champú Natural Orgánico</h3>
+                    <p><strong>100% ingredientes naturales</strong></p>
+                    <ul class="features-list">
+                        <li>Aceite de coco</li>
+                        <li>Manzanilla calmante</li>
+                        <li>Sin sulfatos (SLS/SLES)</li>
+                        <li>Marcas: 4-Legger, Burt's Bees, Earthbath</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acondicionadores -->
+        <section class="section">
+            <h2>✨ Acondicionadores Naturales</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🥑</div>
+                    <h3>Acondicionador de Aguacate</h3>
+                    <p>Hidratación profunda para pelo largo</p>
+                    <ul class="features-list">
+                        <li>Nutre y suaviza</li>
+                        <li>Previene enredos</li>
+                        <li>Brillo intenso</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🌸</div>
+                    <h3>Spray Desenredante</h3>
+                    <p>Sin aclarado, uso diario</p>
+                    <ul class="features-list">
+                        <li>Facilita cepillado</li>
+                        <li>No apelmaza</li>
+                        <li>Aroma suave</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💧</div>
+                    <h3>Leave-in Hidratante</h3>
+                    <p>Para pieles secas</p>
+                    <ul class="features-list">
+                        <li>Manteca de karité</li>
+                        <li>Vitamina E</li>
+                        <li>Protección UV</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🛁 Guía Completa de Baño</h2>
+            <p>Aprende técnicas paso a paso, frecuencia ideal y productos recomendados</p>
+            <a href="bano.html" class="cta-btn">Ver Guía de Baño</a>
+            <a href="como-banar-perro.html" class="cta-btn">Leer Artículo Completo</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>

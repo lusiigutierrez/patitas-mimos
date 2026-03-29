@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado del Pelaje Canino | Patitas y Mimos</title>
+    <meta name="description" content="Técnicas de cepillado, corte de pelo, deslanado y cuidados específicos para cada raza de perro.">
+    <link rel="icon" type="image/png" href="logo-patitas-mimos-transparente.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --light-blue: #E3F2FD;
+            --purple: #B39DDB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #E1D5E7 0%, var(--soft-blue) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--purple);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .care-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--purple);
+        }
+
+        .care-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(179, 157, 219, 0.3);
+        }
+
+        .care-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .care-card h3 {
+            color: var(--purple);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .care-card p {
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            color: var(--warm-brown);
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            background: var(--purple);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, #F3E5F5 0%, white 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .tool-card h4 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-card p {
+            color: var(--warm-brown);
+            font-size: 0.95rem;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #FFC107;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #F57C00;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background: #F3E5F5;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--purple);
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--purple) 0%, var(--baby-blue) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--purple);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .care-grid, .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .care-card, .tool-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>✂️ Cuidado del Pelaje</h1>
+        <p>Técnicas de cepillado, corte de pelo, deslanado y cuidados específicos para cada raza</p>
+    </div>
+
+    <div class="content">
+        <!-- Técnicas de Cepillado -->
+        <section class="section">
+            <h2>🪮 Técnicas de Cepillado por Tipo de Pelaje</h2>
+            
+            <div class="care-grid">
+                <div class="care-card">
+                    <div class="care-icon">🐕</div>
+                    <h3>Pelo Corto (Beagle, Boxer)</h3>
+                    <p><strong>Frecuencia:</strong> 1 vez por semana</p>
+                    <p><strong>Herramienta:</strong> Guante de goma o cepillo de cerdas suaves</p>
+                    <ol class="steps-list">
+                        <li>Cepilla a favor del pelo</li>
+                        <li>Movimientos circulares suaves</li>
+                        <li>Retira pelo muerto</li>
+                        <li>5-10 minutos total</li>
+                    </ol>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🎀</div>
+                    <h3>Pelo Largo (Yorkshire, Shih Tzu)</h3>
+                    <p><strong>Frecuencia:</strong> DIARIO obligatorio</p>
+                    <p><strong>Herramienta:</strong> Cepillo de púas + peine metálico</p>
+                    <ol class="steps-list">
+                        <li>Spray desenredante</li>
+                        <li>Cepilla por capas, desde las puntas</li>
+                        <li>Peine fino para detectar nudos</li>
+                        <li>Atención en orejas, axilas, entre patas</li>
+                        <li>15-30 minutos</li>
+                    </ol>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🐺</div>
+                    <h3>Doble Capa (Husky, Golden)</h3>
+                    <p><strong>Frecuencia:</strong> 2-3 veces por semana (diario en muda)</p>
+                    <p><strong>Herramienta:</strong> Rastrillo de subcapa + FURminator</p>
+                    <ol class="steps-list">
+                        <li>Cepillo slicker primero (capa externa)</li>
+                        <li>Rastrillo de subcapa en dirección del pelo</li>
+                        <li>NUNCA cortar/rapar (protección térmica)</li>
+                        <li>Deslanado profesional 2x/año</li>
+                    </ol>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">☁️</div>
+                    <h3>Pelo Rizado (Caniche, Bichón)</h3>
+                    <p><strong>Frecuencia:</strong> 3-4 veces por semana</p>
+                    <p><strong>Herramienta:</strong> Cepillo slicker + peine metálico</p>
+                    <ol class="steps-list">
+                        <li>Humecta ligeramente</li>
+                        <li>Cepilla contra el pelo (esponja)</li>
+                        <li>Peine para separar rizos</li>
+                        <li>Corte profesional cada 6-8 semanas</li>
+                    </ol>
+                </div>
+
+                <div class="care-card">
+                    <div class="care-icon">🦁</div>
+                    <h3>Pelo Duro (Schnauzer, Terrier)</h3>
+                    <p><strong>Frecuencia:</strong> 1-2 veces por semana</p>
+                    <p><strong>Herramienta:</strong> Cepillo de cerdas duras</p>
+                    <ol class="steps-list">
+                        <li>Cepillado básico semanal</li>
+                        <li>Stripping (arranque) profesional 2-3x/año</li>
+                        <li>NO cortar con máquina (pierde textura)</li>
+                        <li>Mantiene dureza del pelo</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas Esenciales -->
+        <section class="section">
+            <h2>🛠️ Herramientas Esenciales</h2>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>🪮 Cepillo Slicker</h4>
+                    <p>Púas metálicas finas dobladas. Ideal para pelo medio-largo y eliminar nudos superficiales.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🔱 Rastrillo de Subcapa</h4>
+                    <p>Dientes largos rotativos. Imprescindible para doble capa (Husky, Golden, Samoyedo).</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>✂️ FURminator</h4>
+                    <p>Hoja de acero que retira hasta 90% del subpelo muerto. Usar 1-2x/semana máximo.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🧤 Guante de Goma</h4>
+                    <p>Para pelo corto. Masajea mientras retira pelo suelto. Perros adoran.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🪥 Peine Metálico</h4>
+                    <p>Dientes finos y gruesos. Detecta nudos ocultos y desenreda zonas delicadas.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h4>💨 Soplador de Alta Velocidad</h4>
+                    <p>Elimina subpelo muerto mejor que cualquier cepillo. Esencial para doble capa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corte de Pelo -->
+        <section class="section">
+            <h2>✂️ Guía de Corte de Pelo</h2>
+            
+            <div class="info-box">
+                <h3>¿DIY o Profesional?</h3>
+                <p><strong>Hazlo en casa:</strong> Pelo corto, mantenimiento básico, recorte de patas/ojos</p>
+                <p><strong>Llévalo al profesional:</strong> Razas con corte específico (Caniche, Schnauzer), primer corte, perro nervioso, corte de exposición</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-card">
+                    <h3>Corte Básico en Casa</h3>
+                    <p><strong>Necesitarás:</strong> Tijeras de peluquería canina, máquina (opcional), peine</p>
+                    <ol class="steps-list">
+                        <li>Baña y seca completamente ANTES</li>
+                        <li>Cepilla a fondo</li>
+                        <li>Corta pelo entre almohadillas (¡cuidado!)</li>
+                        <li>Recorta alrededor de ojos si tapa visión</li>
+                        <li>Iguala contorno de patas</li>
+                        <li>Zona genital por higiene</li>
+                    </ol>
+                </div>
+
+                <div class="care-card">
+                    <h3>Cortes por Raza</h3>
+                    <p><strong>Caniche:</strong> León, puppy clip, continental</p>
+                    <p><strong>Schnauzer:</strong> Corte tradicional con cejas y barba</p>
+                    <p><strong>Cocker:</strong> Falda larga, orejas con plumas</p>
+                    <p><strong>Bichón:</strong> Cabeza redonda, cuerpo uniforme</p>
+                    <p><strong>Yorkshire:</strong> Pelo largo hasta el suelo o corte cachorro</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ NUNCA Rapes Estas Razas</h3>
+                <p><strong>Doble capa:</strong> Husky, Samoyedo, Chow Chow, Golden, Labrador, Pastor Alemán</p>
+                <p><strong>Razón:</strong> La doble capa regula temperatura (frío Y calor). Raparlos causa:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Sobrecalentamiento en verano</li>
+                    <li>Pérdida de protección UV</li>
+                    <li>Pelo que crece distinto (alopecia post-corte)</li>
+                    <li>Dermatitis y problemas de piel</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Deslanado -->
+        <section class="section">
+            <h2>🌪️ Deslanado: Qué Es y Por Qué Es Esencial</h2>
+            
+            <div class="info-box">
+                <h3>¿Qué es el deslanado?</h3>
+                <p>Proceso de <strong>eliminar el subpelo muerto</strong> de razas con doble capa. El subpelo muerto queda atrapado y causa nudos, sobrecalentamiento y problemas de piel.</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-card">
+                    <h3>Cuándo Deslanar</h3>
+                    <p><strong>Época de muda:</strong> Primavera y otoño (2 veces al año)</p>
+                    <p><strong>Razas que lo necesitan:</strong></p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Husky, Malamute</li>
+                        <li>Golden, Labrador</li>
+                        <li>Pastor Alemán</li>
+                        <li>Samoyedo, Chow Chow</li>
+                        <li>Corgi, Shiba Inu</li>
+                    </ul>
+                </div>
+
+                <div class="care-card">
+                    <h3>Proceso Profesional</h3>
+                    <ol class="steps-list">
+                        <li>Baño con champú penetrante</li>
+                        <li>Secado con soplador alta velocidad</li>
+                        <li>Cepillado con rastrillo de subcapa</li>
+                        <li>Revisión zona por zona</li>
+                        <li>Retira hasta 80% del subpelo muerto</li>
+                    </ol>
+                    <p style="margin-top: 1rem;"><strong>Duración:</strong> 2-4 horas según tamaño</p>
+                    <p><strong>Precio:</strong> 40-80€</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🛁 Guía Completa de Baño</h2>
+            <p>Aprende cómo bañar correctamente antes del cepillado</p>
+            <a href="bano.html" class="cta-btn">Ver Guía de Baño</a>
+            <a href="como-banar-perro.html" class="cta-btn">Leer Artículo Completo</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>

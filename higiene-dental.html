@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higiene Dental Canina | Patitas y Mimos</title>
+    <meta name="description" content="Cómo cepillar los dientes de tu perro, productos dentales efectivos y prevención de enfermedades bucales.">
+    <link rel="icon" type="image/png" href="logo-patitas-mimos-transparente.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --mint: #98D8C8;
+            --light-mint: #C8F2E7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-mint) 0%, #E0F7FA 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--mint);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .guide-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--mint);
+            margin: 2rem 0;
+        }
+
+        .guide-box h3 {
+            color: var(--mint);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            padding: 1rem 0 1rem 3rem;
+            position: relative;
+            color: var(--warm-brown);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            background: var(--mint);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .steps-list strong {
+            color: var(--deep-brown);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, var(--light-mint) 0%, white 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(152, 216, 200, 0.3);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            color: var(--mint);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-card p {
+            color: var(--warm-brown);
+            font-size: 0.95rem;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .product-card li {
+            padding: 0.3rem 0;
+            color: var(--warm-brown);
+        }
+
+        .product-card li::before {
+            content: "✓ ";
+            color: var(--mint);
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background: #FFEBEE;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #E57373;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #C62828;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .info-box {
+            background: var(--light-mint);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--mint);
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--mint);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--mint) 0%, var(--baby-blue) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--mint);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .guide-box {
+                padding: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .product-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>🦷 Higiene Dental Canina</h1>
+        <p>Cómo cepillar sus dientes, productos dentales efectivos y prevención de enfermedades bucales</p>
+    </div>
+
+    <div class="content">
+        <!-- Por Qué Es Importante -->
+        <section class="section">
+            <div class="warning-box">
+                <h3>⚠️ El 80% de los Perros Mayores de 3 Años Tiene Enfermedad Periodontal</h3>
+                <p>La enfermedad dental es <strong>la condición más común en perros</strong> y la más ignorada por los dueños. Sin higiene dental:</p>
+                <ul>
+                    <li>Acumulación de sarro y placa</li>
+                    <li>Gingivitis (encías inflamadas)</li>
+                    <li>Periodontitis (pérdida de hueso)</li>
+                    <li>Pérdida de dientes</li>
+                    <li>Bacterias viajan al corazón, hígado y riñones</li>
+                    <li>Dolor crónico que no muestran</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Guía de Cepillado -->
+        <section class="section">
+            <h2>🪥 Guía Paso a Paso: Cepillar los Dientes</h2>
+            
+            <div class="guide-box">
+                <h3>Preparación: Acostumbrar al Perro (Semana 1-2)</h3>
+                <ol class="steps-list">
+                    <li>
+                        <strong>Día 1-3: Tocar la boca</strong>
+                        Toca sus labios y encías con tu dedo. Premia con snack inmediatamente. Repite 5-10 veces al día. Debe asociar boca = premio.
+                    </li>
+                    <li>
+                        <strong>Día 4-7: Pasta dental</strong>
+                        Deja que lama pasta dental canina de tu dedo. Nunca uses pasta humana (xilitol tóxico). Sabe a pollo/carne para que les guste.
+                    </li>
+                    <li>
+                        <strong>Día 8-10: Cepillo + pasta</strong>
+                        Deja que lama pasta del cepillo. Levanta labio, toca 1-2 dientes con cepillo suavemente. Premia. No fuerces.
+                    </li>
+                    <li>
+                        <strong>Día 11-14: Primeros cepillados</strong>
+                        Cepilla dientes frontales 5-10 segundos. Sesiones MUY cortas. Premia muchísimo. Aumenta gradualmente.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="guide-box">
+                <h3>Cepillado Completo (Una vez acostumbrado)</h3>
+                <ol class="steps-list">
+                    <li>
+                        <strong>Elige el momento</strong>
+                        Perro cansado después de paseo. Nunca cuando está excitado o con hambre. Siempre a la misma hora para crear rutina.
+                    </li>
+                    <li>
+                        <strong>Posición</strong>
+                        Perro pequeño: En tu regazo o mesa. Perro grande: Sentado a tu lado. Nunca lo sujetes con fuerza (estrés). Si se resiste, para y prueba después.
+                    </li>
+                    <li>
+                        <strong>Aplica pasta</strong>
+                        Pasta tamaño guisante en cepillo. Demasiada pasta = espuma = incomodidad.
+                    </li>
+                    <li>
+                        <strong>Levanta labio (NO abras boca)</strong>
+                        No necesitas que abra la boca. Solo levanta el labio superior para acceder a dientes. Mucho más fácil.
+                    </li>
+                    <li>
+                        <strong>Cepilla en ángulo 45°</strong>
+                        Cepillo contra la unión diente-encía. Movimientos circulares suaves. 10 segundos por zona.
+                    </li>
+                    <li>
+                        <strong>Prioriza dientes posteriores</strong>
+                        Muelas y colmillos acumulan MÁS sarro. Parte externa (hacia labios) es más importante que interna (lengua limpia naturalmente).
+                    </li>
+                    <li>
+                        <strong>Duración: 30-60 segundos</strong>
+                        No necesitas más. Sesiones cortas y positivas > sesiones largas estresantes.
+                    </li>
+                    <li>
+                        <strong>Recompensa SIEMPRE</strong>
+                        Snack especial solo para cepillado. Asociación positiva = perro cooperativo.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>📅 ¿Con Qué Frecuencia?</h3>
+                <p><strong>Ideal:</strong> DIARIO (como tú)</p>
+                <p><strong>Mínimo efectivo:</strong> 3-4 veces por semana</p>
+                <p><strong>Mejor que nada:</strong> 1 vez por semana</p>
+                <p><em>La placa se convierte en sarro en 24-48h. Cuanto más frecuente, mejor.</em></p>
+            </div>
+        </section>
+
+        <!-- Productos Dentales -->
+        <section class="section">
+            <h2>🛒 Productos Dentales Efectivos</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🪥</div>
+                    <h3>Cepillo de Dientes</h3>
+                    <p><strong>Opciones:</strong></p>
+                    <ul>
+                        <li>Cepillo de dedo (principiantes)</li>
+                        <li>Cepillo doble cabeza (expertos)</li>
+                        <li>Cepillo eléctrico (razas grandes)</li>
+                        <li>Cerdas suaves SIEMPRE</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Trixie, Beaphar, Virbac</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🍗</div>
+                    <h3>Pasta Dental Canina</h3>
+                    <p><strong>Sabores populares:</strong></p>
+                    <ul>
+                        <li>Pollo (más común)</li>
+                        <li>Carne</li>
+                        <li>Menta (algunos perros)</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Ingredientes clave:</strong> Enzimas (glucosa oxidasa), clorhexidina</p>
+                    <p><strong>Marcas:</strong> Virbac CET, Petrodex, Beaphar</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🦴</div>
+                    <h3>Snacks Dentales</h3>
+                    <p><strong>Efectivos certificados:</strong></p>
+                    <ul>
+                        <li>Pedigree Dentastix</li>
+                        <li>Greenies (VOHC aprobado)</li>
+                        <li>Oravet Chews</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Importante:</strong> Son COMPLEMENTO, no sustituto del cepillado</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💧</div>
+                    <h3>Aditivos para Agua</h3>
+                    <p><strong>Ventaja:</strong> No requiere esfuerzo</p>
+                    <ul>
+                        <li>Añadir al bebedero diario</li>
+                        <li>Reduce placa y mal aliento</li>
+                        <li>NO sustituye cepillado</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> Orozyme, Plaque Off, TropiClean</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🎾</div>
+                    <h3>Juguetes Dentales</h3>
+                    <p><strong>Efectivos:</strong></p>
+                    <ul>
+                        <li>Juguetes con textura (caucho con nudos)</li>
+                        <li>Kong Dental</li>
+                        <li>Cuerdas naturales</li>
+                        <li>Evita muy duros (¡fracturas!)</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💨</div>
+                    <h3>Spray Dental</h3>
+                    <p><strong>Para perros que odian cepillo:</strong></p>
+                    <ul>
+                        <li>Rocía en dientes y encías</li>
+                        <li>Enzimas descomponen placa</li>
+                        <li>Mejor que nada</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Marcas:</strong> TropiClean, Petrodex, Beaphar</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enfermedades y Prevención -->
+        <section class="section">
+            <h2>🩺 Prevención de Enfermedades Bucales</h2>
+            
+            <div class="info-box">
+                <h3>🔍 Señales de Problemas Dentales</h3>
+                <p><strong>Revisa mensualmente y acude al vet si ves:</strong></p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Mal aliento intenso (peor que normal)</li>
+                    <li>Encías rojas o sangrantes</li>
+                    <li>Sarro marrón/amarillo visible</li>
+                    <li>Dientes flojos o rotos</li>
+                    <li>Dificultad para comer (mastica de un lado)</li>
+                    <li>Se toca la boca con la pata</li>
+                    <li>Exceso de babeo</li>
+                    <li>Sangre en juguetes/comida</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>🏥 Limpieza Dental Profesional</h3>
+                <p><strong>Frecuencia recomendada:</strong> Cada 1-3 años según raza y cuidado en casa</p>
+                <p><strong>Proceso:</strong></p>
+                <ul>
+                    <li>Anestesia general (única forma segura de limpiar bien)</li>
+                    <li>Ultrasonidos eliminan sarro bajo encía</li>
+                    <li>Pulido de dientes</li>
+                    <li>Extracción de dientes muy dañados</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Precio:</strong> 150-400€ según clínica y extracciones</p>
+                <p><strong>Razas propensas:</strong> Yorkies, Chihuahuas, Caniches (dientes pequeños, apiñados)</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🛁 Guía Completa de Higiene</h2>
+            <p>Descubre más cuidados esenciales para tu perrito</p>
+            <a href="bano.html" class="cta-btn">Ver Guía de Baño</a>
+            <a href="como-banar-perro.html" class="cta-btn">Leer Artículo Completo</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>
