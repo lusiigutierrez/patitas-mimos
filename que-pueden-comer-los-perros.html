@@ -368,55 +368,79 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 line-height: 1.2;
+                margin-bottom: 0.8rem;
             }
 
             h2 {
-                font-size: 1.5rem;
-                margin: 2rem 0 1rem;
+                font-size: 1.3rem;
+                margin: 1.5rem 0 0.8rem;
             }
 
             h3 {
-                font-size: 1.3rem;
+                font-size: 1.15rem;
+                margin: 1.2rem 0 0.6rem;
             }
 
             h4 {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                margin: 1rem 0 0.5rem;
             }
 
             article {
-                padding: 0 1rem;
-                margin: 2rem auto 1rem;
+                padding: 0 0.8rem;
+                margin: 1rem auto 1rem;
             }
 
             .article-header {
-                padding: 1.5rem 0;
-                margin-bottom: 2rem;
+                padding: 1rem 0;
+                margin-bottom: 1.5rem;
             }
 
             .article-meta {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
                 flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
             }
 
             .article-meta span {
-                margin: 0.3rem 0.5rem;
+                margin: 0.2rem 0.4rem;
             }
 
             p {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin: 0.8rem 0;
             }
 
             .toc {
-                padding: 1.5rem;
+                padding: 1rem;
+                margin: 1.5rem 0;
+                font-size: 0.9rem;
+            }
+
+            .toc h2 {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .toc li {
+                margin: 0.5rem 0;
             }
 
             .product-table,
             .comparison-table,
             .frequency-table {
-                font-size: 0.85rem;
+                font-size: 0.75rem;
+                display: block;
+                overflow-x: auto;
             }
 
             .product-table th,
@@ -425,7 +449,7 @@
             .comparison-table td,
             .frequency-table th,
             .frequency-table td {
-                padding: 0.8rem 0.5rem;
+                padding: 0.6rem 0.4rem;
             }
 
             .product-grid {
@@ -433,42 +457,88 @@
                 gap: 1rem;
             }
 
+            .product-card {
+                padding: 1rem;
+            }
+
             .highlight-box,
             .warning-box,
             .tip-box,
             .info-box {
-                padding: 1rem;
-                margin: 1.5rem 0;
-            }
-
-            .faq-item {
+                padding: 0.8rem;
                 margin: 1rem 0;
-                padding-bottom: 1rem;
+                font-size: 0.9rem;
             }
 
-            .cta-box {
-                padding: 2rem 1.5rem;
-            }
-
-            .cta-box h3 {
-                font-size: 1.5rem;
-            }
-
-            ul, ol {
-                padding-left: 1.5rem;
-            }
-
-            .logo-img {
-                width: 45px;
-                height: 45px;
-            }
-
-            .back-link {
+            .highlight-box strong,
+            .warning-box strong,
+            .tip-box strong,
+            .info-box strong {
                 font-size: 0.95rem;
             }
 
+            .faq-item {
+                margin: 0.8rem 0;
+                padding-bottom: 0.8rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem 1rem;
+                margin: 2rem 0;
+            }
+
+            .cta-box h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-box p {
+                font-size: 0.95rem;
+            }
+
+            ul, ol {
+                padding-left: 1.3rem;
+                font-size: 0.9rem;
+            }
+
+            li {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                padding: 0.8rem 0;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .back-link {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+
             nav {
-                padding: 0 1rem;
+                padding: 0 0.8rem;
+            }
+
+            .disclaimer {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .amazon-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
             }
         }
     </style>
