@@ -433,30 +433,116 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                line-height: 1.2;
             }
 
             h2 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
+                margin: 2rem 0 1rem;
             }
 
             h3 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
             }
 
             article {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
+                margin: 2rem auto 1rem;
+            }
+
+            .article-header {
+                padding: 1.5rem 0;
+                margin-bottom: 2rem;
+            }
+
+            .article-meta {
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
+
+            .article-meta span {
+                margin: 0.3rem 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .toc {
+                padding: 1.5rem;
+            }
+
+            .comparison-table,
+            .frequency-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td,
+            .frequency-table th,
+            .frequency-table td {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .highlight-box,
+            .warning-box,
+            .tip-box,
+            .info-box {
+                padding: 1rem;
+                margin: 1.5rem 0;
             }
 
             .step {
                 padding-left: 1.5rem;
                 padding-top: 3rem;
+                padding-right: 1rem;
+                margin: 1rem 0;
             }
 
             .step::before {
                 left: 50%;
                 transform: translateX(-50%);
                 top: 1rem;
+            }
+
+            .faq-item {
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+            }
+
+            .cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-box h3 {
+                font-size: 1.5rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .logo-img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .back-link {
+                font-size: 0.95rem;
+            }
+
+            nav {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -734,11 +820,6 @@
             </tbody>
         </table>
 
-        <!-- Ad Space 1 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
-        </div>
 
         <h2 id="paso-paso">👣 Guía Paso a Paso: Baño Perfecto 2026</h2>
 
@@ -910,11 +991,6 @@
             </ol>
         </div>
 
-        <!-- Ad Space 2 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
-        </div>
 
         <h2 id="tecnicas-pelaje">✂️ Técnicas Específicas según Tipo de Pelaje</h2>
 
@@ -1067,11 +1143,6 @@
             </tbody>
         </table>
 
-        <!-- Ad Space 3 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
-        </div>
 
         <h2 id="faq">❓ Preguntas Frecuentes</h2>
 

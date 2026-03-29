@@ -268,28 +268,6 @@
             transform: scale(1.05);
         }
 
-        .ad-space {
-            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
-            border: 2px dashed var(--pastel-pink);
-            border-radius: 15px;
-            padding: 3rem;
-            text-align: center;
-            margin: 3rem 0;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .ad-label {
-            color: var(--pastel-pink);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
         .faq {
             background: white;
             padding: 2rem;
@@ -391,19 +369,106 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                line-height: 1.2;
             }
 
             h2 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
+                margin: 2rem 0 1rem;
             }
 
             h3 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
             }
 
             article {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
+                margin: 2rem auto 1rem;
+            }
+
+            .article-header {
+                padding: 1.5rem 0;
+                margin-bottom: 2rem;
+            }
+
+            .article-meta {
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
+
+            .article-meta span {
+                margin: 0.3rem 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .toc {
+                padding: 1.5rem;
+            }
+
+            .product-table,
+            .comparison-table,
+            .frequency-table {
+                font-size: 0.85rem;
+            }
+
+            .product-table th,
+            .product-table td,
+            .comparison-table th,
+            .comparison-table td,
+            .frequency-table th,
+            .frequency-table td {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .highlight-box,
+            .warning-box,
+            .tip-box,
+            .info-box {
+                padding: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .faq-item {
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+            }
+
+            .cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-box h3 {
+                font-size: 1.5rem;
+            }
+
+            ul, ol {
+                padding-left: 1.5rem;
+            }
+
+            .logo-img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .back-link {
+                font-size: 0.95rem;
+            }
+
+            nav {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -618,12 +683,6 @@
             </div>
         </div>
 
-        <!-- Ad Space 1 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
-        </div>
-
         <h2 id="prohibidos">🚫 Alimentos PROHIBIDOS: Actualización</h2>
 
         <div class="warning-box">
@@ -784,12 +843,6 @@
                 <h4>Prebióticos y Probióticos</h4>
                 <p>Enfoque en salud intestinal. Alimentos fermentados como kéfir de cabra (pequeñas cantidades).</p>
             </div>
-        </div>
-
-        <!-- Ad Space 2 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
         </div>
 
         <h2 id="productos">🛒 Mejores Productos para Alimentación Canina 2026</h2>
@@ -1000,12 +1053,6 @@
                     Tomates ROJOS maduros: SÍ, en pequeñas cantidades. Tomates verdes y partes de la planta (tallos, hojas): NO (contienen solanina tóxica). Quita siempre el tallo. 1-2 rodajas de tomate maduro ocasionalmente está bien.
                 </div>
             </div>
-        </div>
-
-        <!-- Ad Space 3 -->
-        <div class="ad-space">
-            <p class="ad-label">Espacio Publicitario</p>
-            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
         </div>
 
         <div class="cta-box">
