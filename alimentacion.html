@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentación Canina - Guía Completa | Patitas y Mimos</title>
+    <meta name="description" content="Descubre qué pueden comer los perros: alimentos seguros, prohibidos y peligrosos. Guía rápida para una alimentación saludable.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --green: #81C784;
+            --light-green: #C8E6C9;
+            --red: #E57373;
+            --light-red: #FFCDD2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-blue) 50%, var(--light-green) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--pastel-pink);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .foods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .food-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 3px solid var(--light-green);
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(129, 199, 132, 0.2);
+        }
+
+        .food-card.prohibited {
+            border-color: var(--red);
+        }
+
+        .food-card.prohibited:hover {
+            box-shadow: 0 6px 20px rgba(229, 115, 115, 0.2);
+        }
+
+        .food-icon {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .food-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--deep-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .food-benefit {
+            font-size: 0.9rem;
+            color: var(--warm-brown);
+        }
+
+        .danger-level {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .danger-high {
+            background: #FFCDD2;
+            color: #C62828;
+        }
+
+        .danger-medium {
+            background: #FFE082;
+            color: #F57C00;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--baby-blue) 0%, var(--pastel-purple) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--baby-blue);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .warning-banner {
+            background: var(--light-red);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--red);
+            margin: 2rem 0;
+        }
+
+        .warning-banner h3 {
+            color: #C62828;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .foods-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .food-card {
+                padding: 1rem;
+            }
+
+            .food-icon {
+                font-size: 3rem;
+            }
+
+            .food-name {
+                font-size: 1rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>🍖 Alimentación Canina</h1>
+        <p>Descubre qué pueden comer los perros, alimentos seguros, prohibidos y cómo crear una dieta balanceada</p>
+    </div>
+
+    <div class="content">
+        <!-- Alimentos Seguros -->
+        <section class="section">
+            <h2>✅ Alimentos Seguros para tu Perro</h2>
+            
+            <div class="foods-grid">
+                <div class="food-card">
+                    <div class="food-icon">🍗</div>
+                    <div class="food-name">Pollo</div>
+                    <div class="food-benefit">Proteína magra, cocido sin hueso</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥩</div>
+                    <div class="food-name">Carne de Res</div>
+                    <div class="food-benefit">Alta en proteínas y hierro</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🐟</div>
+                    <div class="food-name">Salmón</div>
+                    <div class="food-benefit">Omega-3, cocido sin espinas</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥕</div>
+                    <div class="food-name">Zanahorias</div>
+                    <div class="food-benefit">Vitamina A, limpia dientes</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍎</div>
+                    <div class="food-name">Manzanas</div>
+                    <div class="food-benefit">Sin semillas, fibra y vitaminas</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🫐</div>
+                    <div class="food-name">Arándanos</div>
+                    <div class="food-benefit">Antioxidantes naturales</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥒</div>
+                    <div class="food-name">Pepino</div>
+                    <div class="food-benefit">Bajo en calorías, hidratante</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥚</div>
+                    <div class="food-name">Huevos</div>
+                    <div class="food-benefit">Cocidos, proteína completa</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍠</div>
+                    <div class="food-name">Boniato</div>
+                    <div class="food-benefit">Fibra y vitaminas</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍚</div>
+                    <div class="food-name">Arroz</div>
+                    <div class="food-benefit">Cocido, fácil digestión</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥜</div>
+                    <div class="food-name">Mantequilla de Cacahuete</div>
+                    <div class="food-benefit">Sin xilitol, con moderación</div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍉</div>
+                    <div class="food-name">Sandía</div>
+                    <div class="food-benefit">Sin semillas, hidratante</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alimentos PROHIBIDOS -->
+        <section class="section">
+            <h2>🚫 Alimentos PROHIBIDOS</h2>
+            
+            <div class="warning-banner">
+                <h3>⚠️ NUNCA des estos alimentos a tu perro</h3>
+                <p>Pueden causar desde malestar estomacal hasta la muerte. Mantén estos alimentos fuera del alcance de tu perrito.</p>
+            </div>
+
+            <div class="foods-grid">
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍫</div>
+                    <div class="food-name">Chocolate</div>
+                    <div class="food-benefit">Teobromina tóxica</div>
+                    <span class="danger-level danger-high">MORTAL</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍇</div>
+                    <div class="food-name">Uvas y Pasas</div>
+                    <div class="food-benefit">Fallo renal</div>
+                    <span class="danger-level danger-high">MORTAL</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🧅</div>
+                    <div class="food-name">Cebolla</div>
+                    <div class="food-benefit">Destruye glóbulos rojos</div>
+                    <span class="danger-level danger-high">MUY TÓXICO</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🧄</div>
+                    <div class="food-name">Ajo</div>
+                    <div class="food-benefit">Anemia hemolítica</div>
+                    <span class="danger-level danger-high">MUY TÓXICO</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🥑</div>
+                    <div class="food-name">Aguacate</div>
+                    <div class="food-benefit">Persina tóxica</div>
+                    <span class="danger-level danger-medium">TÓXICO</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">☕</div>
+                    <div class="food-name">Café/Té</div>
+                    <div class="food-benefit">Cafeína peligrosa</div>
+                    <span class="danger-level danger-high">MORTAL</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍺</div>
+                    <div class="food-name">Alcohol</div>
+                    <div class="food-benefit">Intoxicación severa</div>
+                    <span class="danger-level danger-high">MORTAL</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍬</div>
+                    <div class="food-name">Xilitol</div>
+                    <div class="food-benefit">En chicles, caramelos</div>
+                    <span class="danger-level danger-high">MORTAL</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🥛</div>
+                    <div class="food-name">Leche</div>
+                    <div class="food-benefit">Intolerancia lactosa</div>
+                    <span class="danger-level danger-medium">EVITAR</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍒</div>
+                    <div class="food-name">Cerezas</div>
+                    <div class="food-benefit">Cianuro en hueso</div>
+                    <span class="danger-level danger-high">MUY TÓXICO</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🥔</div>
+                    <div class="food-name">Papa Cruda</div>
+                    <div class="food-benefit">Solanina tóxica</div>
+                    <span class="danger-level danger-medium">TÓXICO</span>
+                </div>
+
+                <div class="food-card prohibited">
+                    <div class="food-icon">🍊</div>
+                    <div class="food-name">Cítricos</div>
+                    <div class="food-benefit">Irritación estomacal</div>
+                    <span class="danger-level danger-medium">PRECAUCIÓN</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA al artículo completo -->
+        <div class="cta-section">
+            <h2>¿Quieres Saber Más?</h2>
+            <p>Lee nuestra guía completa con porciones recomendadas, tendencias en nutrición canina, productos premium y muchos más alimentos detallados</p>
+            <a href="que-pueden-comer-los-perros.html" class="cta-btn">📖 Leer Guía Completa</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>

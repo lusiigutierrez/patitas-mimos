@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietas Especiales para Perros | Patitas y Mimos</title>
+    <meta name="description" content="Guía sobre dietas BARF, caseras, para perros con alergias y necesidades nutricionales especiales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --purple: #B39DDB;
+            --light-purple: #E1D5E7;
+            --orange: #FFB74D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-purple) 0%, var(--soft-pink) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--purple);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .diet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .diet-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--purple);
+        }
+
+        .diet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(179, 157, 219, 0.3);
+        }
+
+        .diet-card h3 {
+            color: var(--purple);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .diet-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .diet-card p {
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .pros-cons {
+            margin-top: 1.5rem;
+        }
+
+        .pros-cons h4 {
+            color: var(--purple);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros-cons li {
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+            color: var(--warm-brown);
+        }
+
+        .pros-cons .pro::before {
+            content: "✓ ";
+            color: #81C784;
+            font-weight: 700;
+        }
+
+        .pros-cons .con::before {
+            content: "✗ ";
+            color: #E57373;
+            font-weight: 700;
+        }
+
+        .allergy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .allergy-card {
+            background: linear-gradient(135deg, var(--light-purple) 0%, white 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .allergy-card h4 {
+            color: var(--purple);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .allergy-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .allergy-card li {
+            padding: 0.4rem 0;
+            color: var(--warm-brown);
+        }
+
+        .allergy-card li::before {
+            content: "• ";
+            color: var(--purple);
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #FFC107;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #F57C00;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .info-box {
+            background: var(--light-purple);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--purple);
+            margin: 2rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--purple) 0%, var(--pastel-pink) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--purple);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .diet-grid,
+            .allergy-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .diet-card,
+            .allergy-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>🍽️ Dietas Especiales</h1>
+        <p>BARF, dietas caseras, alergias y necesidades nutricionales específicas para tu perro</p>
+    </div>
+
+    <div class="content">
+        <!-- Tipos de Dietas -->
+        <section class="section">
+            <h2>🥩 Tipos de Dietas Alternativas</h2>
+            
+            <div class="diet-grid">
+                <div class="diet-card">
+                    <div class="diet-icon">🦴</div>
+                    <h3>Dieta BARF</h3>
+                    <p><strong>Biologically Appropriate Raw Food</strong> - Alimentación cruda biológicamente apropiada basada en la dieta ancestral del lobo.</p>
+                    
+                    <p><strong>Composición típica:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>70% carne muscular</li>
+                        <li>10% huesos carnosos crudos</li>
+                        <li>10% órganos (5% hígado)</li>
+                        <li>10% vegetales/frutas</li>
+                    </ul>
+
+                    <div class="pros-cons">
+                        <h4>✓ Ventajas</h4>
+                        <ul>
+                            <li class="pro">Dientes más limpios</li>
+                            <li class="pro">Heces más pequeñas</li>
+                            <li class="pro">Pelaje más brillante</li>
+                            <li class="pro">Más energía</li>
+                        </ul>
+                    </div>
+
+                    <div class="pros-cons">
+                        <h4>✗ Desventajas</h4>
+                        <ul>
+                            <li class="con">Riesgo bacteriano (Salmonella, E. coli)</li>
+                            <li class="con">Requiere conocimiento</li>
+                            <li class="con">Más costosa</li>
+                            <li class="con">Requiere congelador grande</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="diet-card">
+                    <div class="diet-icon">👨‍🍳</div>
+                    <h3>Dieta Casera Cocida</h3>
+                    <p>Comida preparada en casa con <strong>ingredientes frescos y cocidos.</strong> Más segura que BARF pero requiere suplementación.</p>
+                    
+                    <p><strong>Componentes esenciales:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>Proteína (pollo, pavo, res, pescado)</li>
+                        <li>Carbohidratos (arroz, boniato, avena)</li>
+                        <li>Verduras (zanahoria, calabaza, brócoli)</li>
+                        <li>Grasa saludable (aceite de pescado)</li>
+                        <li>Suplemento vitamínico-mineral</li>
+                    </ul>
+
+                    <div class="pros-cons">
+                        <h4>✓ Ventajas</h4>
+                        <ul>
+                            <li class="pro">Control total de ingredientes</li>
+                            <li class="pro">Más segura que BARF</li>
+                            <li class="pro">Buena para alergias</li>
+                            <li class="pro">Más digestible</li>
+                        </ul>
+                    </div>
+
+                    <div class="pros-cons">
+                        <h4>✗ Desventajas</h4>
+                        <ul>
+                            <li class="con">Requiere tiempo</li>
+                            <li class="con">Necesita suplementos</li>
+                            <li class="con">Fácil desequilibrar</li>
+                            <li class="con">No es práctica para viajar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="diet-card">
+                    <div class="diet-icon">🌾</div>
+                    <h3>Pienso Premium/Grain-Free</h3>
+                    <p>Pienso comercial de <strong>alta calidad</strong> sin cereales, con carne como primer ingrediente y sin subproductos.</p>
+                    
+                    <p><strong>Características clave:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>≥25% proteína animal</li>
+                        <li>Sin maíz, trigo, soja</li>
+                        <li>Carne real como 1er ingrediente</li>
+                        <li>Sin colorantes ni conservantes artificiales</li>
+                    </ul>
+
+                    <div class="pros-cons">
+                        <h4>✓ Ventajas</h4>
+                        <ul>
+                            <li class="pro">Nutricionalmente completo</li>
+                            <li class="pro">Conveniente y práctico</li>
+                            <li class="pro">Larga conservación</li>
+                            <li class="pro">Fácil de dosificar</li>
+                        </ul>
+                    </div>
+
+                    <div class="pros-cons">
+                        <h4>✗ Desventajas</h4>
+                        <ul>
+                            <li class="con">Procesado a altas temperaturas</li>
+                            <li class="con">Premium = más caro</li>
+                            <li class="con">Menos atractivo para algunos perros</li>
+                            <li class="con">Puede contener ingredientes ocultos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alergias e Intolerancias -->
+        <section class="section">
+            <h2>🚨 Alergias e Intolerancias</h2>
+            
+            <div class="info-box">
+                <h3>📋 Síntomas Comunes</h3>
+                <p><strong>Piel:</strong> Picazón intensa, rascado excesivo, lamido de patas, infecciones de oído recurrentes, puntos calientes, pérdida de pelo</p>
+                <p><strong>Digestivos:</strong> Vómitos, diarrea crónica, gases excesivos, heces blandas</p>
+            </div>
+
+            <div class="allergy-grid">
+                <div class="allergy-card">
+                    <h4>🥩 Alérgenos Comunes</h4>
+                    <ul>
+                        <li><strong>Pollo</strong> (más frecuente)</li>
+                        <li><strong>Res/Ternera</strong></li>
+                        <li><strong>Lácteos</strong></li>
+                        <li><strong>Trigo/Gluten</strong></li>
+                        <li><strong>Maíz</strong></li>
+                        <li><strong>Soja</strong></li>
+                        <li><strong>Huevo</strong></li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>✅ Proteínas Hipoalergénicas</h4>
+                    <ul>
+                        <li><strong>Pato</strong></li>
+                        <li><strong>Venado</strong></li>
+                        <li><strong>Conejo</strong></li>
+                        <li><strong>Salmón</strong></li>
+                        <li><strong>Canguro</strong></li>
+                        <li><strong>Bisonte</strong></li>
+                        <li><strong>Insectos</strong> (tendencia nueva)</li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>🧪 Diagnóstico</h4>
+                    <ul>
+                        <li><strong>Dieta de eliminación</strong> (8-12 semanas)</li>
+                        <li><strong>Prueba de provocación</strong></li>
+                        <li><strong>Test intradérmico</strong> (para ambientales)</li>
+                        <li><strong>Análisis de sangre</strong> (menos fiable)</li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>🍽️ Soluciones Dietéticas</h4>
+                    <ul>
+                        <li><strong>Pienso hidrolizado</strong></li>
+                        <li><strong>Novel protein</strong> (proteína nueva)</li>
+                        <li><strong>Limited ingredient</strong> (ingredientes limitados)</li>
+                        <li><strong>Dieta casera monoproteica</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Necesidades Especiales -->
+        <section class="section">
+            <h2>🎯 Necesidades Especiales</h2>
+            
+            <div class="allergy-grid">
+                <div class="allergy-card">
+                    <h4>🐕 Cachorros</h4>
+                    <ul>
+                        <li>Mayor % proteína (mínimo 22%)</li>
+                        <li>DHA para desarrollo cerebral</li>
+                        <li>Calcio/fósforo equilibrado</li>
+                        <li>Comidas frecuentes (3-4x/día)</li>
+                        <li>Pienso específico cachorros</li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>👴 Seniors</h4>
+                    <ul>
+                        <li>Menos calorías (menos activos)</li>
+                        <li>Más fibra (digestión lenta)</li>
+                        <li>Glucosamina/condroitina (articulaciones)</li>
+                        <li>Antioxidantes (función cognitiva)</li>
+                        <li>Textura más blanda</li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>⚖️ Sobrepeso</h4>
+                    <ul>
+                        <li>Pienso light/diet (bajo en grasa)</li>
+                        <li>Más fibra (saciedad)</li>
+                        <li>L-carnitina (quema grasa)</li>
+                        <li>Porciones controladas</li>
+                        <li>Snacks bajos en calorías</li>
+                    </ul>
+                </div>
+
+                <div class="allergy-card">
+                    <h4>💪 Muy Activos</h4>
+                    <ul>
+                        <li>Alto % proteína (>25%)</li>
+                        <li>Más grasa (energía)</li>
+                        <li>Pienso performance/active</li>
+                        <li>Suplementos articulares</li>
+                        <li>Hidratación constante</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertencia -->
+        <div class="warning-box">
+            <h3>⚠️ Consulta Siempre con tu Veterinario</h3>
+            <p><strong>Antes de cambiar la dieta de tu perro, especialmente a BARF o casera, consulta con un veterinario o nutricionista veterinario.</strong></p>
+            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li>Las dietas mal balanceadas pueden causar deficiencias graves</li>
+                <li>Cada perro tiene necesidades individuales</li>
+                <li>Transiciones deben ser graduales (7-10 días)</li>
+                <li>Monitoriza peso, energía y heces regularmente</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🍖 Completa tu Conocimiento sobre Alimentación</h2>
+            <p>Descubre todos los alimentos seguros, prohibidos, porciones y mucho más</p>
+            <a href="alimentacion.html" class="cta-btn">🥩 Ver Todos los Alimentos</a>
+            <a href="que-pueden-comer-los-perros.html" class="cta-btn">📖 Guía Completa de Alimentación</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>

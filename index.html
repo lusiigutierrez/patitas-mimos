@@ -310,6 +310,7 @@
             padding-right: 2rem;
         }
 
+        section > .ad-space,
         section > .features-grid,
         section > .blog-grid,
         section > .products-grid,
@@ -394,9 +395,59 @@
             line-height: 1.7;
             position: relative;
             z-index: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card .card-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--pastel-pink);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            margin-top: 1rem;
+        }
+
+        .feature-card .card-btn:hover {
+            background: var(--baby-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(180, 212, 255, 0.4);
         }
 
         /* Ad Placeholder */
+        .ad-space {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
+            border: 2px dashed var(--pastel-pink);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ad-space::before {
+            content: '📢';
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .ad-label {
+            color: var(--pastel-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         /* Blog Preview */
         .blog-grid {
             display: grid;
@@ -696,9 +747,9 @@
                 <li class="dropdown">
                     <a href="#guias">Guías ▾</a>
                     <div class="dropdown-content">
-                        <a href="#alimentacion">🍖 Alimentación</a>
-                        <a href="#bano">🛁 Baño</a>
-                        <a href="#salud">💊 Salud</a>
+                        <a href="alimentacion.html">🍖 Alimentación</a>
+                        <a href="bano.html">🛁 Baño</a>
+                        <a href="salud.html">💊 Salud</a>
                         <a href="#adiestramiento">🎓 Adiestramiento</a>
                     </div>
                 </li>
@@ -733,19 +784,27 @@
                 <span class="feature-icon">🥩</span>
                 <h3>Qué Pueden Comer</h3>
                 <p>Alimentos seguros vs prohibidos, porciones recomendadas y guía completa de nutrición para cada etapa.</p>
+                <a href="alimentacion.html" class="card-btn">Ver Más →</a>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🥕</span>
                 <h3>Frutas y Verduras</h3>
                 <p>Descubre qué frutas y verduras son seguras, sus beneficios nutricionales y cómo prepararlas correctamente.</p>
+                <a href="frutas-verduras.html" class="card-btn">Ver Más →</a>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🍽️</span>
                 <h3>Dietas Especiales</h3>
                 <p>BARF, dietas caseras, alimentos para perros con alergias y necesidades nutricionales específicas.</p>
+                <a href="dietas-especiales.html" class="card-btn">Ver Más →</a>
             </div>
         </div>
 
+        <!-- Ad Space 1 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
+        </div>
     </section>
 
     <!-- Sección Baño -->
@@ -759,6 +818,7 @@
                 <span class="feature-icon">🧴</span>
                 <h3>Productos de Baño</h3>
                 <p>Mejores champús según tipo de pelaje, productos hipoalergénicos y acondicionadores naturales recomendados.</p>
+                <a href="bano.html" class="card-btn">Ver Guía Completa →</a>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">✂️</span>
@@ -820,6 +880,7 @@
                 <span class="feature-icon">💉</span>
                 <h3>Vacunas y Prevención</h3>
                 <p>Calendario de vacunación, desparasitación y prevención de enfermedades comunes.</p>
+                <a href="salud.html" class="card-btn">Ver Calendario →</a>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🏥</span>
@@ -833,6 +894,11 @@
             </div>
         </div>
 
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
+        </div>
     </section>
 
     <!-- Sección Adiestramiento -->
@@ -943,6 +1009,12 @@
                 <p>Productos para una sonrisa saludable</p>
                 <span class="amazon-badge">Ver en Amazon</span>
             </div>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
         </div>
     </section>
 

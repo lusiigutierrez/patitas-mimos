@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas y Verduras para Perros | Patitas y Mimos</title>
+    <meta name="description" content="Descubre qué frutas y verduras son seguras para tu perro, beneficios nutricionales y cómo prepararlas correctamente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --green: #81C784;
+            --light-green: #C8E6C9;
+            --orange: #FFB74D;
+            --light-orange: #FFE0B2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--light-orange) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--green);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .intro-box {
+            background: var(--light-green);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--green);
+            margin: 2rem 0;
+        }
+
+        .intro-box h3 {
+            color: var(--green);
+            margin-bottom: 1rem;
+        }
+
+        .foods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .food-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 3px solid var(--light-green);
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(129, 199, 132, 0.2);
+        }
+
+        .food-card.fruit {
+            border-color: var(--orange);
+        }
+
+        .food-card.fruit:hover {
+            box-shadow: 0 6px 20px rgba(255, 183, 77, 0.2);
+        }
+
+        .food-icon {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .food-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--deep-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .food-benefit {
+            font-size: 0.9rem;
+            color: var(--warm-brown);
+            margin-bottom: 0.8rem;
+        }
+
+        .food-prep {
+            font-size: 0.85rem;
+            color: var(--green);
+            font-weight: 600;
+            background: var(--light-green);
+            padding: 0.3rem 0.6rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #FFC107;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #F57C00;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--green) 0%, var(--orange) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--green);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .foods-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .food-card {
+                padding: 1rem;
+            }
+
+            .food-icon {
+                font-size: 3rem;
+            }
+
+            .food-name {
+                font-size: 1rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span class="logo-text">Patitas & Mimos</span>
+            </div>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>🥕 Frutas y Verduras para Perros</h1>
+        <p>Descubre qué frutas y verduras son seguras, sus beneficios nutricionales y cómo prepararlas correctamente</p>
+    </div>
+
+    <div class="content">
+        <div class="intro-box">
+            <h3>💚 Beneficios de Frutas y Verduras</h3>
+            <p>Las frutas y verduras son excelentes <strong>snacks naturales</strong> para tu perro. Aportan vitaminas, minerales, fibra y antioxidantes sin añadir muchas calorías. Perfectas como premios saludables o complementos a su dieta.</p>
+        </div>
+
+        <!-- Verduras Seguras -->
+        <section class="section">
+            <h2>🥬 Verduras Seguras</h2>
+            
+            <div class="foods-grid">
+                <div class="food-card">
+                    <div class="food-icon">🥕</div>
+                    <div class="food-name">Zanahorias</div>
+                    <div class="food-benefit">Vitamina A, limpia dientes, baja en calorías</div>
+                    <span class="food-prep">Cruda o cocida</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥒</div>
+                    <div class="food-name">Pepino</div>
+                    <div class="food-benefit">Hidratante, bajo en calorías, refrescante</div>
+                    <span class="food-prep">Crudo, sin piel</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥦</div>
+                    <div class="food-name">Brócoli</div>
+                    <div class="food-benefit">Antioxidantes, fibra, vitamina C</div>
+                    <span class="food-prep">Cocido, pequeñas cantidades</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🫑</div>
+                    <div class="food-name">Pimiento Rojo</div>
+                    <div class="food-benefit">Vitamina C, betacaroteno, antioxidantes</div>
+                    <span class="food-prep">Crudo o cocido, sin semillas</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥬</div>
+                    <div class="food-name">Espinacas</div>
+                    <div class="food-benefit">Hierro, vitaminas A/C/K, fibra</div>
+                    <span class="food-prep">Cocidas, con moderación</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🎃</div>
+                    <div class="food-name">Calabaza</div>
+                    <div class="food-benefit">Fibra, ayuda digestión, vitamina A</div>
+                    <span class="food-prep">Cocida, sin piel</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍠</div>
+                    <div class="food-name">Boniato</div>
+                    <div class="food-benefit">Vitaminas, fibra, energía saludable</div>
+                    <span class="food-prep">Cocido, sin piel</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥔</div>
+                    <div class="food-name">Patata</div>
+                    <div class="food-benefit">Energía, vitamina C, potasio</div>
+                    <span class="food-prep">Cocida, NUNCA cruda</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🌽</div>
+                    <div class="food-name">Maíz</div>
+                    <div class="food-benefit">Energía, fibra, vitaminas</div>
+                    <span class="food-prep">Cocido, desgranado</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥗</div>
+                    <div class="food-name">Lechuga</div>
+                    <div class="food-benefit">Hidratante, baja en calorías</div>
+                    <span class="food-prep">Cruda, bien lavada</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🫛</div>
+                    <div class="food-name">Guisantes</div>
+                    <div class="food-benefit">Proteína vegetal, vitaminas, fibra</div>
+                    <span class="food-prep">Cocidos o congelados</span>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🌿</div>
+                    <div class="food-name">Apio</div>
+                    <div class="food-benefit">Refresca aliento, baja en calorías</div>
+                    <span class="food-prep">Crudo, en trozos pequeños</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frutas Seguras -->
+        <section class="section">
+            <h2>🍎 Frutas Seguras</h2>
+            
+            <div class="foods-grid">
+                <div class="food-card fruit">
+                    <div class="food-icon">🍎</div>
+                    <div class="food-name">Manzanas</div>
+                    <div class="food-benefit">Fibra, vitamina C, limpia dientes</div>
+                    <span class="food-prep">Sin semillas ni corazón</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍌</div>
+                    <div class="food-name">Plátano</div>
+                    <div class="food-benefit">Potasio, vitamina B6, energía</div>
+                    <span class="food-prep">Con moderación (alto en azúcar)</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🫐</div>
+                    <div class="food-name">Arándanos</div>
+                    <div class="food-benefit">Antioxidantes, vitamina C, memoria</div>
+                    <span class="food-prep">Crudos o congelados</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍓</div>
+                    <div class="food-name">Fresas</div>
+                    <div class="food-benefit">Vitamina C, antioxidantes, fibra</div>
+                    <span class="food-prep">Sin hojas, con moderación</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍉</div>
+                    <div class="food-name">Sandía</div>
+                    <div class="food-benefit">Hidratante, vitamina A/B6/C</div>
+                    <span class="food-prep">Sin semillas ni corteza</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍊</div>
+                    <div class="food-name">Naranja</div>
+                    <div class="food-benefit">Vitamina C, hidratación</div>
+                    <span class="food-prep">Sin piel, pequeñas cantidades</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🥭</div>
+                    <div class="food-name">Mango</div>
+                    <div class="food-benefit">Vitamina A/B6/C/E, antioxidantes</div>
+                    <span class="food-prep">Sin hueso ni piel</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍑</div>
+                    <div class="food-name">Melocotón</div>
+                    <div class="food-benefit">Vitamina A/C, fibra</div>
+                    <span class="food-prep">Sin hueso (tóxico)</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍐</div>
+                    <div class="food-name">Pera</div>
+                    <div class="food-benefit">Fibra, vitamina C/K, cobre</div>
+                    <span class="food-prep">Sin semillas ni corazón</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍍</div>
+                    <div class="food-name">Piña</div>
+                    <div class="food-benefit">Bromelina, vitamina C, digestión</div>
+                    <span class="food-prep">Sin piel ni corazón duro</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🍇</div>
+                    <div class="food-name">Frambuesas</div>
+                    <div class="food-benefit">Antioxidantes, fibra, antiinflamatorio</div>
+                    <span class="food-prep">Con moderación</span>
+                </div>
+
+                <div class="food-card fruit">
+                    <div class="food-icon">🥝</div>
+                    <div class="food-name">Kiwi</div>
+                    <div class="food-benefit">Vitamina C/K, fibra, antioxidantes</div>
+                    <span class="food-prep">Sin piel</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertencias -->
+        <div class="warning-box">
+            <h3>⚠️ Reglas Importantes</h3>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Moderación:</strong> Frutas y verduras deben ser < 10% de la dieta diaria</li>
+                <li><strong>Introducción gradual:</strong> Una fruta/verdura nueva cada vez</li>
+                <li><strong>Sin semillas/huesos:</strong> Pueden contener cianuro o causar asfixia</li>
+                <li><strong>Trozos pequeños:</strong> Adaptados al tamaño del perro</li>
+                <li><strong>Lavar bien:</strong> Eliminar pesticidas y suciedad</li>
+                <li><strong>Evitar:</strong> Uvas, pasas, aguacate, cebolla, ajo (muy tóxicos)</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🍽️ Completa tu Conocimiento</h2>
+            <p>Descubre porciones recomendadas, proteínas, alimentos prohibidos y mucho más</p>
+            <a href="alimentacion.html" class="cta-btn">🥩 Ver Todos los Alimentos</a>
+            <a href="que-pueden-comer-los-perros.html" class="cta-btn">📖 Guía Completa de Alimentación</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Tu guía de confianza para el cuidado canino 🐶</p>
+    </footer>
+</body>
+</html>
