@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas y Mimos - Tu Guía Completa para el Cuidado de tu Perrito</title>
+    <meta name="description" content="Descubre consejos de alimentación, adiestramiento, salud y los mejores productos para tu perrito. Únete a nuestra comunidad de amantes de los perritos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --pastel-purple: #E6D5FF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        /* Area invisible GRANDE para mantener el menú abierto al mover el ratón */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -10px;
+            right: -10px;
+            height: 20px;
+            background: transparent;
+            z-index: 999;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:hover::before,
+        .dropdown-content:hover {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: var(--deep-brown);
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--soft-pink);
+            transform: translateX(5px);
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 2.5rem 0 3.5rem;
+            background: linear-gradient(135deg, 
+                var(--soft-pink) 0%, 
+                var(--light-pink) 40%, 
+                var(--soft-blue) 100%);
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-logo {
+            width: 180px;
+            height: auto;
+            margin: 0 auto 1rem;
+            filter: drop-shadow(0 6px 15px rgba(255, 182, 193, 0.2));
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            animation: fadeInUp 1s ease;
+            font-weight: 700;
+            text-shadow: none;
+            padding: 0 1.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--warm-brown);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--pastel-pink);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 182, 193, 0.4);
+            background: var(--baby-blue);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--pastel-pink);
+            border: 2px solid var(--pastel-pink);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pastel-pink);
+            color: white;
+        }
+
+        /* Content Sections */
+        section {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 4rem 0;
+        }
+
+        section > * {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        section > .ad-space,
+        section > .features-grid,
+        section > .blog-grid,
+        section > .products-grid,
+        section > .newsletter {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            color: var(--pastel-pink);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '🐾';
+            display: block;
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 3px solid var(--soft-pink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--soft-pink) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(255, 182, 193, 0.15);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card p {
+            color: var(--warm-brown);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ad Placeholder */
+        .ad-space {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
+            border: 2px dashed var(--pastel-pink);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ad-space::before {
+            content: '📢';
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .ad-label {
+            color: var(--pastel-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Blog Preview */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            color: var(--warm-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card p {
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .read-more {
+            color: var(--pastel-pink);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            border-color: var(--baby-blue);
+            transform: scale(1.05);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .amazon-badge {
+            display: inline-block;
+            background: var(--baby-blue);
+            color: var(--deep-brown);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-purple) 100%);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+            margin: 4rem 0;
+        }
+
+        .newsletter h2 {
+            color: white;
+        }
+
+        .newsletter h2::after {
+            content: '💌';
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .newsletter button {
+            padding: 1rem 2.5rem;
+            background: var(--baby-blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .newsletter button:hover {
+            background: white;
+            color: var(--pastel-pink);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+            font-size: 1.8rem;
+        }
+
+        .social-links a {
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: var(--baby-blue);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .logo span {
+                font-size: 1.3rem !important;
+            }
+
+            .logo-img {
+                width: 45px;
+                height: auto;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem 3rem;
+            }
+
+            .hero-logo {
+                width: 140px;
+                height: auto;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter input {
+                min-width: 100%;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--pastel-pink);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+                <span style="font-family: 'Caveat', cursive; font-size: 1.8rem; color: white; margin-left: 0.5rem; font-weight: 700;">Patitas & Mimos</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#guias">Guías ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#alimentacion">🍖 Alimentación</a>
+                        <a href="#bano">🛁 Baño</a>
+                        <a href="#salud">💊 Salud</a>
+                        <a href="#adiestramiento">🎓 Adiestramiento</a>
+                    </div>
+                </li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <img src="logo-patitas-mimos-transparente.png" alt="Patitas y Mimos Logo" class="hero-logo">
+            <h1>Cuidados Expertos para tu Mejor Amigo</h1>
+            <p class="subtitle">Guías completas de alimentación, baño, salud y adiestramiento para que tu perrito viva feliz y saludable</p>
+            <div class="cta-buttons">
+                <a href="#alimentacion" class="btn btn-primary">Explorar Guías</a>
+                <a href="#comunidad" class="btn btn-secondary">Únete a la Comunidad</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Alimentación -->
+    <section id="alimentacion">
+        <h2>Alimentación 🍖</h2>
+        <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--warm-brown); font-size: 1.1rem;">
+            Descubre qué pueden comer, dietas balanceadas y los mejores alimentos para tu peludo
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🥩</span>
+                <h3>Qué Pueden Comer</h3>
+                <p>Alimentos seguros vs prohibidos, porciones recomendadas y guía completa de nutrición para cada etapa.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🥕</span>
+                <h3>Frutas y Verduras</h3>
+                <p>Descubre qué frutas y verduras son seguras, sus beneficios nutricionales y cómo prepararlas correctamente.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🍽️</span>
+                <h3>Dietas Especiales</h3>
+                <p>BARF, dietas caseras, alimentos para perros con alergias y necesidades nutricionales específicas.</p>
+            </div>
+        </div>
+
+        <!-- Ad Space 1 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
+        </div>
+    </section>
+
+    <!-- Sección Baño -->
+    <section id="bano">
+        <h2>Baño e Higiene 🛁</h2>
+        <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--warm-brown); font-size: 1.1rem;">
+            Todo lo que necesitas para mantener a tu perrito limpio, fresco y saludable
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🧴</span>
+                <h3>Productos de Baño</h3>
+                <p>Mejores champús según tipo de pelaje, productos hipoalergénicos y acondicionadores naturales recomendados.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">✂️</span>
+                <h3>Cuidado del Pelaje</h3>
+                <p>Técnicas de cepillado, corte de pelo, deslanado y cuidados específicos para cada raza.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🦷</span>
+                <h3>Higiene Dental</h3>
+                <p>Cómo cepillar sus dientes, productos dentales efectivos y prevención de enfermedades bucales.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💅</span>
+                <h3>Uñas y Patas</h3>
+                <p>Guía para cortar uñas correctamente, cuidado de almohadillas y protección de patas.</p>
+            </div>
+        </div>
+
+        <!-- Productos de Baño Recomendados -->
+        <div style="margin-top: 3rem;">
+            <h3 style="text-align: center; color: var(--warm-brown); font-size: 1.8rem; margin-bottom: 2rem;">Productos de Baño Recomendados</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-icon">🧴</span>
+                    <h3>Champú Hipoalergénico</h3>
+                    <p>Ideal para pieles sensibles</p>
+                    <span class="amazon-badge">Ver en Amazon</span>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🪮</span>
+                    <h3>Cepillo Furminator</h3>
+                    <p>Elimina pelo muerto eficazmente</p>
+                    <span class="amazon-badge">Ver en Amazon</span>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🦷</span>
+                    <h3>Kit Dental Completo</h3>
+                    <p>Cepillo + pasta dental canina</p>
+                    <span class="amazon-badge">Ver en Amazon</span>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">✂️</span>
+                    <h3>Cortauñas Profesional</h3>
+                    <p>Corte seguro y preciso</p>
+                    <span class="amazon-badge">Ver en Amazon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Salud -->
+    <section id="salud">
+        <h2>Salud y Cuidados 💊</h2>
+        <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--warm-brown); font-size: 1.1rem;">
+            Guías veterinarias, prevención y cuidados para mantener a tu perrito sano
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">💉</span>
+                <h3>Vacunas y Prevención</h3>
+                <p>Calendario de vacunación, desparasitación y prevención de enfermedades comunes.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏥</span>
+                <h3>Primeros Auxilios</h3>
+                <p>Qué hacer en emergencias, botiquín básico y señales de alerta importantes.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔍</span>
+                <h3>Síntomas Comunes</h3>
+                <p>Identifica señales de enfermedad y cuándo es necesario acudir al veterinario.</p>
+            </div>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
+        </div>
+    </section>
+
+    <!-- Sección Adiestramiento -->
+    <section id="adiestramiento">
+        <h2>Adiestramiento 🎓</h2>
+        <p style="text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--warm-brown); font-size: 1.1rem;">
+            Técnicas efectivas y positivas para educar a tu mejor amigo
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📚</span>
+                <h3>Comandos Básicos</h3>
+                <p>Sienta, quieto, ven, junto y más. Aprende las técnicas paso a paso con refuerzo positivo.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏠</span>
+                <h3>Educación en Casa</h3>
+                <p>Cómo enseñarle dónde hacer sus necesidades, convivencia y buenos modales en el hogar.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎪</span>
+                <h3>Trucos Divertidos</h3>
+                <p>Dale la pata, rueda, hazte el muerto y más trucos para fortalecer vuestro vínculo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog">
+        <h2>Últimas Guías y Consejos</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">🥩</div>
+                <div class="blog-content">
+                    <h3>Qué Pueden Comer los Perritos: Guía Completa</h3>
+                    <p>Descubre qué alimentos son seguros, cuáles están prohibidos y cómo crear una dieta balanceada...</p>
+                    <a href="que-pueden-comer-los-perros.html" class="read-more">Leer más →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">🛁</div>
+                <div class="blog-content">
+                    <h3>Cómo Bañar a tu Perro: Guía Paso a Paso</h3>
+                    <p>Aprende la técnica correcta, frecuencia ideal y los mejores productos para cada tipo de pelaje...</p>
+                    <a href="como-banar-perro.html" class="read-more">Leer más →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">💊</div>
+                <div class="blog-content">
+                    <h3>Calendario de Vacunación Canina Completo</h3>
+                    <p>Todo lo que necesitas saber sobre vacunas obligatorias, opcionales y cuándo aplicarlas...</p>
+                    <a href="calendario-vacunacion-canina.html" class="read-more">Leer más →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">🎓</div>
+                <div class="blog-content">
+                    <h3>7 Comandos Básicos que Todo Perro Debe Aprender</h3>
+                    <p>Técnicas de adiestramiento positivo para enseñar comandos esenciales paso a paso...</p>
+                    <a href="#adiestramiento" class="read-more">Próximamente →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">🪮</div>
+                <div class="blog-content">
+                    <h3>Cepillado Perfecto: Guía por Tipo de Pelaje</h3>
+                    <p>Descubre qué cepillo necesitas, técnicas profesionales y rutinas de cepillado ideales...</p>
+                    <a href="#bano" class="read-more">Próximamente →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">🦷</div>
+                <div class="blog-content">
+                    <h3>Higiene Dental Canina: Evita Problemas Futuros</h3>
+                    <p>Cómo cepillar los dientes de tu perro correctamente y prevenir enfermedades bucales...</p>
+                    <a href="#bano" class="read-more">Próximamente →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos">
+        <h2>Productos Top Recomendados</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <span class="product-icon">🦴</span>
+                <h3>Juguetes Interactivos</h3>
+                <p>Los mejores juguetes para estimular su mente</p>
+                <span class="amazon-badge">Ver en Amazon</span>
+            </div>
+            <div class="product-card">
+                <span class="product-icon">🍽️</span>
+                <h3>Comederos Premium</h3>
+                <p>Comederos ergonómicos y seguros</p>
+                <span class="amazon-badge">Ver en Amazon</span>
+            </div>
+            <div class="product-card">
+                <span class="product-icon">🛏️</span>
+                <h3>Camas Confortables</h3>
+                <p>El descanso que tu perrito merece</p>
+                <span class="amazon-badge">Ver en Amazon</span>
+            </div>
+            <div class="product-card">
+                <span class="product-icon">🦷</span>
+                <h3>Higiene Dental</h3>
+                <p>Productos para una sonrisa saludable</p>
+                <span class="amazon-badge">Ver en Amazon</span>
+            </div>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Aquí irá tu anuncio de Google AdSense</p>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="comunidad">
+        <div class="newsletter">
+            <h2>Únete a Nuestra Comunidad</h2>
+            <p>Recibe consejos semanales, ofertas exclusivas y conéctate con otros amantes de los perritos</p>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">¡Me Apunto! 🐾</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; margin-bottom: 1rem; font-size: 1.8rem;">
+                <img src="logo-perrito-solo.png" alt="Patitas y Mimos" style="width: 80px; height: auto;">
+                Patitas & Mimos
+            </div>
+            <p style="opacity: 0.8; margin-bottom: 1rem;">Creando una comunidad de amor por los perritos</p>
+            
+            <div class="social-links">
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="TikTok">🎵</a>
+                <a href="#" title="Pinterest">📌</a>
+            </div>
+            
+            <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 2rem;">
+                © 2024 Patitas y Mimos. Hecho con amor para tu peludo 🐶
+            </p>
+            <p style="opacity: 0.5; font-size: 0.8rem; margin-top: 0.5rem;">
+                <a href="#" style="color: white;">Política de Privacidad</a> • 
+                <a href="#" style="color: white;">Términos de Uso</a> • 
+                <a href="#" style="color: white;">Contacto</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+
+        // Newsletter form handler (placeholder)
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por unirte a Patitas y Mimos! 🐾\n\nPronto recibirás nuestros mejores consejos.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

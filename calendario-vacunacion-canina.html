@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Vacunación Canina Completo | Patitas y Mimos</title>
+    <meta name="description" content="Guía completa de vacunación para perros: calendario por edad, vacunas obligatorias vs opcionales, efectos secundarios y todo lo que necesitas saber para proteger a tu perrito.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --pastel-purple: #E6D5FF;
+            --green: #81C784;
+            --light-green: #C8E6C9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.8;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        article {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--green);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .article-meta {
+            color: var(--warm-brown);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        .article-meta span {
+            margin: 0 1rem;
+        }
+
+        .toc {
+            background: var(--light-green);
+            border-left: 4px solid var(--green);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .toc h2 {
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 0.8rem 0;
+        }
+
+        .toc a {
+            color: var(--warm-brown);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .toc a:hover {
+            color: var(--green);
+            transform: translateX(5px);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--green);
+            margin: 3rem 0 1.5rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--warm-brown);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 1.2rem 0;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 5px solid var(--green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .critical-box {
+            background: #FFEBEE;
+            border-left: 5px solid #E57373;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            border-left: 5px solid #FFC107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: var(--soft-blue);
+            border-left: 5px solid var(--baby-blue);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .vaccine-schedule {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+        }
+
+        .age-block {
+            background: var(--light-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            border-left: 5px solid var(--green);
+        }
+
+        .age-block h4 {
+            color: var(--green);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .vaccine-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .vaccine-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(129, 199, 132, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .vaccine-list li:last-child {
+            border-bottom: none;
+        }
+
+        .vaccine-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--green);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid var(--light-green);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--light-green);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge-obligatory {
+            background: #E57373;
+            color: white;
+        }
+
+        .badge-recommended {
+            background: #FFB74D;
+            color: white;
+        }
+
+        .badge-optional {
+            background: #AED581;
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--green);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.3rem;
+            top: 1.5rem;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--green);
+            border: 3px solid var(--cream);
+        }
+
+        .ad-space {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
+            border: 2px dashed var(--pastel-pink);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ad-label {
+            color: var(--pastel-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid var(--light-green);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(129, 199, 132, 0.2);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h4 {
+            color: var(--green);
+            margin: 1rem 0 0.5rem;
+        }
+
+        .amazon-btn {
+            background: var(--green);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .amazon-btn:hover {
+            background: var(--pastel-pink);
+            transform: scale(1.05);
+        }
+
+        .faq {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-item {
+            margin: 1.5rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-green);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--green);
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: var(--warm-brown);
+            line-height: 1.7;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--green) 0%, var(--pastel-purple) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--green);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .disclaimer {
+            background: var(--light-pink);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            font-size: 0.9rem;
+            color: var(--warm-brown);
+            border-left: 3px solid var(--pastel-pink);
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin: 0.8rem 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            article {
+                padding: 0 1.5rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <article>
+        <div class="article-header">
+            <h1>💉 Calendario de Vacunación Canina Completo</h1>
+            <div class="article-meta">
+                <span>📅 Actualizado: Marzo 2026</span>
+                <span>⏱️ 18 min lectura</span>
+                <span>✍️ Equipo Patitas y Mimos</span>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>🛡️ La Importancia de Vacunar:</strong> Las vacunas han salvado millones de vidas caninas. Este calendario actualizado incluye las últimas recomendaciones veterinarias, nuevas vacunas disponibles, y protocolos personalizados según estilo de vida. Proteger a tu perrito empieza aquí.
+        </div>
+
+        <div class="toc">
+            <h2>📑 Índice de Contenidos</h2>
+            <ul>
+                <li><a href="#como-funcionan">🔬 Cómo Funcionan las Vacunas</a></li>
+                <li><a href="#calendario-completo">📅 Calendario Completo por Edad</a></li>
+                <li><a href="#obligatorias-opcionales">⚖️ Obligatorias vs Opcionales</a></li>
+                <li><a href="#cachorros">🐶 Protocolo para Cachorros</a></li>
+                <li><a href="#adultos">🦮 Vacunas de Refuerzo Adultos</a></li>
+                <li><a href="#efectos-secundarios">⚠️ Efectos Secundarios</a></li>
+                <li><a href="#titulacion">🧪 Titulación de Anticuerpos</a></li>
+                <li><a href="#productos">🛒 Productos de Salud Preventiva</a></li>
+                <li><a href="#faq">❓ Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+
+        <h2 id="como-funcionan">🔬 Cómo Funcionan las Vacunas Caninas</h2>
+
+        <p>Las vacunas entrenan el sistema inmunológico de tu perro para reconocer y combatir enfermedades específicas <strong>antes</strong> de que se exponga al patógeno real.</p>
+
+        <div class="info-box">
+            <h4>🧬 Proceso de Inmunización</h4>
+            <ol>
+                <li><strong>Administración:</strong> Se introduce una versión debilitada o inactivada del virus/bacteria</li>
+                <li><strong>Reconocimiento:</strong> El sistema inmune identifica el "invasor"</li>
+                <li><strong>Respuesta:</strong> Se crean anticuerpos específicos contra esa enfermedad</li>
+                <li><strong>Memoria:</strong> El cuerpo "recuerda" cómo combatirla en el futuro</li>
+                <li><strong>Protección:</strong> Si se expone al patógeno real, la respuesta es inmediata y eficaz</li>
+            </ol>
+        </div>
+
+        <h3>Tipos de Vacunas</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Descripción</th>
+                    <th>Ventajas</th>
+                    <th>Ejemplos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Vivas Atenuadas</strong></td>
+                    <td>Virus/bacteria debilitado pero vivo</td>
+                    <td>Inmunidad más fuerte y duradera</td>
+                    <td>Moquillo, Parvovirus</td>
+                </tr>
+                <tr>
+                    <td><strong>Inactivadas (Muertas)</strong></td>
+                    <td>Patógeno muerto químicamente</td>
+                    <td>Más seguras, menos efectos secundarios</td>
+                    <td>Rabia, Leptospirosis</td>
+                </tr>
+                <tr>
+                    <td><strong>Recombinantes</strong></td>
+                    <td>Tecnología ADN, solo proteínas clave</td>
+                    <td>Muy seguras, precisas</td>
+                    <td>Algunas vacunas de Lyme</td>
+                </tr>
+                <tr>
+                    <td><strong>Polivalentes</strong></td>
+                    <td>Múltiples enfermedades en una inyección</td>
+                    <td>Menos pinchazos, más conveniente</td>
+                    <td>DHPP (6 en 1)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="calendario-completo">📅 Calendario de Vacunación Completo</h2>
+
+        <div class="vaccine-schedule">
+            <h3 style="text-align: center; color: var(--green); margin-bottom: 2rem;">Timeline Visual de Vacunación</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>🍼 6-8 Semanas (Primera Visita)</h4>
+                    <ul class="vaccine-list">
+                        <li><span class="vaccine-icon">💉</span> <strong>Parvovirus</strong> <span class="badge badge-obligatory">Obligatoria</span></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Moquillo</strong> <span class="badge badge-obligatory">Obligatoria</span></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Opcional:</strong> Tos de las Perreras (si va a socializar pronto)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.8;">⚠️ Peso mínimo: 1kg. Antes de esta edad, la inmunidad materna todavía protege.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>🐕 10-12 Semanas (Segunda Dosis)</h4>
+                    <ul class="vaccine-list">
+                        <li><span class="vaccine-icon">💉</span> <strong>DHPP (Polivalente)</strong> <span class="badge badge-obligatory">Obligatoria</span></li>
+                        <li style="padding-left: 2.5rem; font-size: 0.95rem;">Incluye: Moquillo, Hepatitis, Parainfluenza, Parvovirus</li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Leptospirosis (1ª dosis)</strong> <span class="badge badge-recommended">Recomendada</span></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Opcional:</strong> Lyme (zonas endémicas)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>🦴 14-16 Semanas (Tercera Dosis)</h4>
+                    <ul class="vaccine-list">
+                        <li><span class="vaccine-icon">💉</span> <strong>DHPP (Refuerzo)</strong> <span class="badge badge-obligatory">Obligatoria</span></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Leptospirosis (2ª dosis)</strong> <span class="badge badge-recommended">Recomendada</span></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>RABIA</strong> <span class="badge badge-obligatory">OBLIGATORIA POR LEY</span></li>
+                    </ul>
+                    <p style="margin-top: 1rem; background: #FFEBEE; padding: 1rem; border-radius: 8px;">
+                        <strong>🚨 CRÍTICO:</strong> La rabia es obligatoria por ley en España. Sin esta vacuna NO puedes viajar, ir a residencias, ni obtener licencia de perro potencialmente peligroso. Multas: €300-3,000.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>🎂 1 Año (Primer Refuerzo Anual)</h4>
+                    <ul class="vaccine-list">
+                        <li><span class="vaccine-icon">💉</span> <strong>DHPP</strong></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Rabia</strong></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Leptospirosis</strong></li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Tos de las Perreras</strong> (si va a guardería/parques)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>🦮 Adulto (Refuerzos Cada 1-3 Años)</h4>
+                    <ul class="vaccine-list">
+                        <li><span class="vaccine-icon">💉</span> <strong>DHPP:</strong> Cada 1-3 años (según protocolo veterinario)</li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Rabia:</strong> Cada 1-3 años (según legislación regional)</li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Leptospirosis:</strong> Anual (inmunidad corta)</li>
+                        <li><span class="vaccine-icon">💉</span> <strong>Bordetella:</strong> Anual (tos de las perreras)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; background: var(--light-green); padding: 1rem; border-radius: 8px;">
+                        <strong>💡 Nuevo Protocolo:</strong> Muchos veterinarios ahora recomiendan protocolos extendidos (cada 3 años) para perros adultos sanos tras confirmar inmunidad con titulación de anticuerpos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Space 1 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="obligatorias-opcionales">⚖️ Vacunas Obligatorias vs Recomendadas vs Opcionales</h2>
+
+        <h3>🔴 Vacunas OBLIGATORIAS (Core Vaccines)</h3>
+
+        <p>Estas vacunas son <strong>esenciales</strong> para todos los perros, independientemente de su estilo de vida. Protegen contra enfermedades mortales y altamente contagiosas.</p>
+
+        <div class="age-block" style="background: #FFEBEE; border-color: #E57373;">
+            <h4 style="color: #C62828;">💉 Rabia (Obligatoria por Ley)</h4>
+            <ul>
+                <li><strong>Enfermedad:</strong> Virus que afecta sistema nervioso, 100% mortal</li>
+                <li><strong>Transmisión:</strong> Mordida de animal infectado (mamíferos salvajes principalmente)</li>
+                <li><strong>Primera dosis:</strong> 12-16 semanas</li>
+                <li><strong>Refuerzo:</strong> Anual o trienal (según comunidad autónoma)</li>
+                <li><strong>Legal:</strong> Obligatoria en toda España. Multa por incumplimiento.</li>
+                <li><strong>Viajes:</strong> Imprescindible para viajar (UE requiere rabia + pasaporte)</li>
+            </ul>
+        </div>
+
+        <div class="age-block">
+            <h4>💉 DHPP - Polivalente (4 en 1)</h4>
+            
+            <h4 style="font-size: 1.1rem; margin-top: 1.5rem;">D - Moquillo (Distemper)</h4>
+            <ul>
+                <li>Virus altamente contagioso, mortalidad 50-80% en cachorros</li>
+                <li>Síntomas: fiebre, secreción nasal, convulsiones, parálisis</li>
+                <li>Prevención: Vacunación es la ÚNICA protección efectiva</li>
+            </ul>
+
+            <h4 style="font-size: 1.1rem; margin-top: 1.5rem;">H - Hepatitis Infecciosa Canina (Adenovirus)</h4>
+            <ul>
+                <li>Afecta hígado, riñones, ojos, vasos sanguíneos</li>
+                <li>Síntomas: ictericia, dolor abdominal, vómitos con sangre</li>
+                <li>Mortalidad: Especialmente alta en cachorros</li>
+            </ul>
+
+            <h4 style="font-size: 1.1rem; margin-top: 1.5rem;">P - Parvovirus</h4>
+            <ul>
+                <li>Gastroenteritis hemorrágica severa</li>
+                <li>Síntomas: diarrea sanguinolenta, vómitos, deshidratación extrema</li>
+                <li>Mortalidad: 91% sin tratamiento, 20% con tratamiento veterinario intensivo</li>
+                <li>Resistencia: El virus sobrevive meses en el ambiente</li>
+                <li><strong>Crítico:</strong> Principal causa de muerte en cachorros no vacunados</li>
+            </ul>
+
+            <h4 style="font-size: 1.1rem; margin-top: 1.5rem;">P - Parainfluenza</h4>
+            <ul>
+                <li>Parte del complejo "tos de las perreras"</li>
+                <li>Infección respiratoria contagiosa</li>
+                <li>Menos severa que las anteriores, pero puede complicarse</li>
+            </ul>
+        </div>
+
+        <h3>🟡 Vacunas RECOMENDADAS (Non-Core pero Importantes)</h3>
+
+        <div class="age-block" style="background: #FFF9C4; border-color: #FFB74D;">
+            <h4 style="color: #F57C00;">💉 Leptospirosis</h4>
+            <ul>
+                <li><strong>Bacteria:</strong> Transmitida por orina de roedores/animales salvajes</li>
+                <li><strong>Riesgo:</strong> Perros que beben de charcos, ríos, zonas rurales</li>
+                <li><strong>Zoonosis:</strong> Contagiosa a humanos (grave)</li>
+                <li><strong>Síntomas:</strong> Fallo renal/hepático, ictericia, muerte</li>
+                <li><strong>Inmunidad:</strong> Corta duración, requiere refuerzo anual</li>
+                <li><strong>Cepas:</strong> Vacuna cubre 4 serotipos principales</li>
+                <li><strong>Recomendada para:</strong> Todos los perros en España (clima húmedo, presencia de roedores)</li>
+            </ul>
+        </div>
+
+        <div class="age-block" style="background: #FFF9C4; border-color: #FFB74D;">
+            <h4 style="color: #F57C00;">💉 Tos de las Perreras (Bordetella + Parainfluenza)</h4>
+            <ul>
+                <li><strong>Enfermedad:</strong> Traqueobronquitis infecciosa</li>
+                <li><strong>Síntomas:</strong> Tos seca persistente ("bocina"), arcadas</li>
+                <li><strong>Contagio:</strong> Muy alto en lugares concurridos</li>
+                <li><strong>Administración:</strong> Intranasal (gotas en nariz) o inyectable</li>
+                <li><strong>Recomendada para:</strong> Perros que van a guarderías, parques caninos, residencias, exposiciones, peluquerías</li>
+                <li><strong>Refuerzo:</strong> Anual o cada 6 meses (alta exposición)</li>
+            </ul>
+        </div>
+
+        <h3>🟢 Vacunas OPCIONALES (Según Riesgo Geográfico/Estilo de Vida)</h3>
+
+        <div class="age-block" style="background: var(--light-green); border-color: var(--green);">
+            <h4>💉 Enfermedad de Lyme (Borreliosis)</h4>
+            <ul>
+                <li><strong>Transmisión:</strong> Garrapatas infectadas</li>
+                <li><strong>Zonas de riesgo:</strong> Norte de España, zonas boscosas, montaña</li>
+                <li><strong>Síntomas:</strong> Cojera, fiebre, inflamación articular, daño renal</li>
+                <li><strong>Prevención:</strong> Antiparasitarios + vacuna si vive/viaja a zona endémica</li>
+                <li><strong>Protocolo:</strong> 2 dosis iniciales + refuerzo anual</li>
+            </ul>
+        </div>
+
+        <div class="age-block" style="background: var(--light-green); border-color: var(--green);">
+            <h4>💉 Leishmaniosis</h4>
+            <ul>
+                <li><strong>Parásito:</strong> Transmitido por mosquito flebotomo</li>
+                <li><strong>Zonas de riesgo:</strong> Mediterráneo, Andalucía, Levante, Baleares</li>
+                <li><strong>Enfermedad:</strong> Crónica, potencialmente mortal</li>
+                <li><strong>Vacuna:</strong> NO cura, PREVIENE (reduce probabilidad 4x)</li>
+                <li><strong>Protocolo:</strong> 3 dosis separadas 21 días + refuerzo anual</li>
+                <li><strong>Edad mínima:</strong> 6 meses</li>
+                <li><strong>Importante:</strong> Test previo para confirmar que NO está infectado</li>
+                <li><strong>Complemento:</strong> Usar collares repelentes + pipetas</li>
+            </ul>
+        </div>
+
+        <div class="age-block" style="background: var(--light-green); border-color: var(--green);">
+            <h4>💉 Coronavirus Canino</h4>
+            <ul>
+                <li><strong>Enfermedad:</strong> Gastroenteritis (menos grave que Parvovirus)</li>
+                <li><strong>Opinión veterinaria:</strong> Controvertida, muchos no la recomiendan</li>
+                <li><strong>Razón:</strong> Enfermedad generalmente leve, inmunidad incierta</li>
+                <li><strong>Considerar:</strong> Solo en criaderos o ambientes de muy alto riesgo</li>
+            </ul>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="efectos-secundarios">⚠️ Efectos Secundarios y Qué Esperar</h2>
+
+        <div class="warning-box">
+            <strong>📊 Estadística Tranquilizadora:</strong> El 99% de los perros NO presenta efectos secundarios graves. Los beneficios de vacunar superan ENORMEMENTE los riesgos.
+        </div>
+
+        <h3>Reacciones Normales (Comunes, No Preocupantes)</h3>
+
+        <div class="info-box">
+            <h4>✅ Qué es Normal las Primeras 24-48h</h4>
+            <ul>
+                <li>💤 <strong>Letargo leve:</strong> Está más dormilón de lo habitual</li>
+                <li>🤒 <strong>Fiebre baja:</strong> 38.5-39.5°C (normal: 38-39°C)</li>
+                <li>😴 <strong>Menos apetito:</strong> Come menos o rechaza una comida</li>
+                <li>💉 <strong>Bulto en zona de inyección:</strong> Pequeño, blando, no doloroso</li>
+                <li>😣 <strong>Sensibilidad leve:</strong> Se queja si tocas el área vacunada</li>
+                <li>🤧 <strong>Estornudos (vacuna intranasal):</strong> Si fue tos de las perreras nasal</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>Duración:</strong> 24-72 horas máximo. Si persiste más → veterinario.</p>
+        </div>
+
+        <h3>Reacciones que Requieren Atención Veterinaria</h3>
+
+        <div class="critical-box">
+            <h4>🚨 Llama al Veterinario SI ves:</h4>
+            <ul>
+                <li>🤮 <strong>Vómitos repetidos</strong> (más de 2 veces)</li>
+                <li>💩 <strong>Diarrea severa</strong> o con sangre</li>
+                <li>🌡️ <strong>Fiebre alta</strong> (>39.5°C) que persiste >24h</li>
+                <li>😰 <strong>Hinchazón facial</strong> (hocico, ojos, orejas)</li>
+                <li>🫁 <strong>Dificultad para respirar</strong></li>
+                <li>🔴 <strong>Urticaria</strong> (ronchas rojas en piel)</li>
+                <li>🥴 <strong>Colapso o debilidad extrema</strong></li>
+                <li>🩸 <strong>Sangrado o hematomas</strong> inusuales</li>
+                <li>💥 <strong>Convulsiones</strong></li>
+            </ul>
+        </div>
+
+        <div class="critical-box">
+            <h4>🆘 EMERGENCIA - Ve a Urgencias Veterinarias YA:</h4>
+            <ul>
+                <li><strong>Reacción anafiláctica</strong> (muy rara: 1 de cada 10,000 vacunas)</li>
+                <li>Síntomas: Colapso súbito, encías pálidas/azules, dificultad respiratoria severa</li>
+                <li>Tiempo crítico: Primeros 15-30 minutos post-vacunación</li>
+                <li><strong>Por esto es importante:</strong> Quedarse 15-20 min en la clínica después de vacunar</li>
+            </ul>
+        </div>
+
+        <h3>Cómo Minimizar Efectos Secundarios</h3>
+
+        <ul>
+            <li>✅ <strong>Vacunar perros sanos:</strong> No vacunar si está enfermo, estresado, o recién operado</li>
+            <li>✅ <strong>Espaciar vacunas:</strong> Si tu perro es sensible, pedir que separen vacunas en diferentes días</li>
+            <li>✅ <strong>Evitar ejercicio intenso:</strong> Descanso 24-48h post-vacunación</li>
+            <li>✅ <strong>Hidratación:</strong> Asegurar que beba agua suficiente</li>
+            <li>✅ <strong>Esperar en clínica:</strong> 15-20 min post-vacuna por si hay reacción aguda</li>
+            <li>✅ <strong>Informar historial:</strong> Si tuvo reacciones previas, avisar al veterinario</li>
+        </ul>
+
+        <h2 id="titulacion">🧪 Titulación de Anticuerpos: ¿Es Necesaria?</h2>
+
+        <p>La <strong>titulación</strong> es un análisis de sangre que mide el nivel de anticuerpos contra enfermedades específicas. Te dice si tu perro todavía está protegido SIN necesidad de revacunar.</p>
+
+        <div class="info-box">
+            <h4>🔬 Cómo Funciona</h4>
+            <ol>
+                <li>Extracción de sangre (como análisis normal)</li>
+                <li>Laboratorio mide anticuerpos contra Moquillo, Parvovirus, Adenovirus</li>
+                <li>Resultado: "Protegido" o "Necesita refuerzo"</li>
+                <li>Coste: €60-120 (según laboratorio)</li>
+            </ol>
+        </div>
+
+        <h3>¿Cuándo Considerar la Titulación?</h3>
+
+        <ul>
+            <li>✅ <strong>Perros adultos sanos:</strong> Para decidir si necesita refuerzo anual o puede esperar 3 años</li>
+            <li>✅ <strong>Historial de reacciones:</strong> Si tuvo efectos secundarios a vacunas previas</li>
+            <li>✅ <strong>Enfermedades crónicas:</strong> Perros inmunodeprimidos o con cáncer</li>
+            <li>✅ <strong>Perros senior:</strong> >8 años, para no sobre-vacunar</li>
+            <li>✅ <strong>Filosofía de mínima intervención:</strong> Dueños que prefieren evitar vacunas innecesarias</li>
+        </ul>
+
+        <h3>Limitaciones de la Titulación</h3>
+
+        <ul>
+            <li>❌ <strong>NO funciona para Rabia:</strong> La ley exige vacunación, no acepta titulación</li>
+            <li>❌ <strong>NO funciona para Leptospirosis:</strong> Inmunidad mediada por células, no medible con anticuerpos</li>
+            <li>⚠️ <strong>No todos los veterinarios ofrecen:</strong> Consultar disponibilidad</li>
+            <li>💰 <strong>Coste:</strong> Puede ser más caro que la vacuna misma</li>
+        </ul>
+
+        <h2 id="productos">🛒 Productos de Salud Preventiva Recomendados</h2>
+
+        <h3>Registros y Seguimiento</h3>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">📔</div>
+                <h4>Cartilla de Vacunación</h4>
+                <p>Registro oficial para viajes y residencias</p>
+                <ul>
+                    <li>✅ Formato homologado UE</li>
+                    <li>✅ Espacio para 10+ vacunas</li>
+                    <li>✅ Sección desparasitación</li>
+                </ul>
+                <p style="color: var(--green); font-weight: 600;">€5-10</p>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">📱</div>
+                <h4>App de Salud Canina</h4>
+                <p>Recordatorios automáticos de vacunas</p>
+                <ul>
+                    <li>✅ 11pets, PetDesk, Pet Health</li>
+                    <li>✅ Alertas previas (7-15 días)</li>
+                    <li>✅ Historial completo</li>
+                    <li>✅ Gratis o €2-5/mes</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🏥</div>
+                <h4>Seguro Veterinario</h4>
+                <p>Cubre vacunas + emergencias</p>
+                <ul>
+                    <li>✅ Planes desde €15/mes</li>
+                    <li>✅ Vacunas incluidas (algunos)</li>
+                    <li>✅ Cobertura emergencias</li>
+                </ul>
+                <a href="#" class="amazon-btn">Comparar Seguros</a>
+            </div>
+        </div>
+
+        <h3>Complementos de Salud Preventiva</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Función</th>
+                    <th>Beneficio</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Inmunoestimulante Natural</strong></td>
+                    <td>Refuerza sistema inmune</td>
+                    <td>Mejor respuesta a vacunas, menos infecciones</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Probióticos Caninos</strong></td>
+                    <td>Salud intestinal = mejor inmunidad</td>
+                    <td>70% del sistema inmune está en el intestino</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Omega-3 de Calidad</strong></td>
+                    <td>Antiinflamatorio, salud celular</td>
+                    <td>Reduce reacciones post-vacunación</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Termómetro Digital Veterinario</strong></td>
+                    <td>Monitorear fiebre post-vacuna</td>
+                    <td>Detección temprana de reacciones</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Collar Calmante</strong></td>
+                    <td>Reduce estrés de visitas veterinarias</td>
+                    <td>Feromonas + lavanda, efecto 30 días</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Ad Space 3 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="faq">❓ Preguntas Frecuentes sobre Vacunación Canina</h2>
+
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo vacunar a mi perro en casa o comprar las vacunas online?</div>
+                <div class="faq-answer">
+                    <strong>NO es recomendable ni legal en muchos casos.</strong> Razones:<br>
+                    <ul>
+                        <li>❌ La vacuna de la rabia DEBE ser administrada por veterinario colegiado para ser válida legalmente</li>
+                        <li>❌ Las vacunas requieren cadena de frío estricta (2-8°C). Si se rompe, pierden efectividad</li>
+                        <li>❌ Riesgo de reacción anafiláctica - necesitas acceso inmediato a tratamiento de emergencia</li>
+                        <li>❌ Técnica incorrecta puede causar abscesos o vacuna inefectiva</li>
+                        <li>❌ Sin certificado veterinario oficial, la vacuna no es válida para viajes/residencias</li>
+                    </ul>
+                    <strong>Ahorro aparente vs. riesgos:</strong> No vale la pena. Vacuna en clínica veterinaria.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Es seguro vacunar a una perra embarazada o lactante?</div>
+                <div class="faq-answer">
+                    <strong>Generalmente NO.</strong><br>
+                    <strong>Embarazada:</strong> Evitar vacunas vivas atenuadas durante gestación. Pueden afectar al desarrollo fetal. Si es estrictamente necesario, solo vacunas muertas bajo supervisión veterinaria.<br>
+                    <strong>Lactante:</strong> Esperar hasta que destete a los cachorros (6-8 semanas). Excepción: emergencia o exposición de alto riesgo.<br>
+                    <strong>Ideal:</strong> Vacunar ANTES del embarazo para que transmita anticuerpos a cachorros vía calostro.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Mi perro es senior (10+ años). ¿Sigue necesitando vacunas?</div>
+                <div class="faq-answer">
+                    <strong>Sí, pero con protocolo ajustado.</strong><br>
+                    <strong>Rabia:</strong> Obligatoria por ley (sin excepción de edad).<br>
+                    <strong>DHPP:</strong> Considerar titulación de anticuerpos cada 1-2 años. Si está protegido, puede NO necesitar refuerzo anual.<br>
+                    <strong>Leptospirosis:</strong> Si sigue expuesto (paseos, contacto con agua), mantener anual.<br>
+                    <strong>Tos perreras:</strong> Solo si sigue socializando en parques/guarderías.<br>
+                    <strong>Importante:</strong> Perros senior tienen sistema inmune más débil. Consultar veterinario sobre protocolo personalizado. Algunos benefician de vacunas más frecuentes; otros, de titulación y menos vacunas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Adopté un perro adulto sin historial. ¿Qué hago?</div>
+                <div class="faq-answer">
+                    <strong>Protocolo de vacunación para perro sin historial:</strong><br>
+                    <ol>
+                        <li><strong>Revisión veterinaria completa:</strong> Descartar enfermedades antes de vacunar</li>
+                        <li><strong>Considerar titulación:</strong> Puede ya estar protegido (ahorra dinero y vacunas innecesarias)</li>
+                        <li><strong>Si no haces titulación:</strong> Protocolo de 2 dosis separadas 3-4 semanas:
+                            <ul>
+                                <li>Primera visita: DHPP + Leptospirosis</li>
+                                <li>Segunda visita (3-4 sem): DHPP + Leptospirosis + Rabia</li>
+                            </ul>
+                        </li>
+                        <li><strong>Refuerzos:</strong> Seguir calendario normal (anuales o trienales según protocolo)</li>
+                    </ol>
+                    <strong>¿Por qué 2 dosis?</strong> Para asegurar inmunidad si es la primera vez. Si ya estuvo vacunado antes (aunque no lo sepamos), funcionará como refuerzo.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Pueden vacunarse varios perros con la misma jeringa/vial?</div>
+                <div class="faq-answer">
+                    <strong>NUNCA.</strong> Cada perro debe recibir su propia dosis con material estéril individual. Riesgos de compartir:<br>
+                    <ul>
+                        <li>❌ Transmisión de enfermedades infecciosas entre perros</li>
+                        <li>❌ Contaminación del vial</li>
+                        <li>❌ Dosificación incorrecta</li>
+                        <li>❌ Legalmente inválido</li>
+                    </ul>
+                    Si un veterinario sugiere esto, <strong>CAMBIA de veterinario</strong>. Es mala praxis grave.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Las vacunas causan autismo o problemas de conducta?</div>
+                <div class="faq-answer">
+                    <strong>NO. Esto es un mito sin base científica.</strong><br>
+                    Este mito viene de un estudio fraudulento en humanos (retractado y desacreditado). Múltiples estudios veterinarios extensos confirman:<br>
+                    <ul>
+                        <li>✅ Las vacunas NO causan autismo (el cual ni siquiera está definido igual en perros)</li>
+                        <li>✅ Las vacunas NO causan problemas de conducta</li>
+                        <li>✅ Los beneficios (prevención de enfermedades mortales) superan infinitamente cualquier riesgo mínimo</li>
+                    </ul>
+                    <strong>Riesgos REALES de NO vacunar:</strong> Muerte por parvovirus, moquillo, leptospirosis. Eso sí es real y prevenible.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto cuesta vacunar a un perro en España?</div>
+                <div class="faq-answer">
+                    <strong>Precios aproximados (varían por clínica y región):</strong><br>
+                    <table style="width: 100%; margin-top: 1rem;">
+                        <tr><td><strong>Consulta veterinaria</strong></td><td>€25-40</td></tr>
+                        <tr><td><strong>DHPP (polivalente)</strong></td><td>€30-50</td></tr>
+                        <tr><td><strong>Rabia</strong></td><td>€20-35</td></tr>
+                        <tr><td><strong>Leptospirosis</strong></td><td>€25-40</td></tr>
+                        <tr><td><strong>Tos perreras</strong></td><td>€25-40</td></tr>
+                        <tr><td><strong>Leishmaniosis (3 dosis)</strong></td><td>€180-250 total</td></tr>
+                        <tr><td><strong>Lyme</strong></td><td>€30-50</td></tr>
+                        <tr><td><strong>Pasaporte europeo</strong></td><td>€15-25 (una vez)</td></tr>
+                    </table>
+                    <strong>Primera vacunación completa cachorro:</strong> €150-300 (3 visitas + rabia + pasaporte)<br>
+                    <strong>Refuerzo anual adulto:</strong> €80-150 (consulta + 2-3 vacunas)<br>
+                    <strong>Ahorro:</strong> Algunas clínicas ofrecen "packs" anuales con descuento.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo bañar a mi perro el mismo día de la vacunación?</div>
+                <div class="faq-answer">
+                    <strong>NO es recomendable.</strong><br>
+                    <strong>Espera 48-72 horas antes de bañar.</strong> Razones:<br>
+                    <ul>
+                        <li>El baño puede estresar y bajar defensas cuando el cuerpo está generando respuesta inmune</li>
+                        <li>Agua fría puede causar hipotermia leve si tiene fiebre post-vacuna</li>
+                        <li>Mojar zona de inyección puede aumentar riesgo de infección</li>
+                    </ul>
+                    <strong>Mejor:</strong> Bañar 1-2 días ANTES de vacunar, o esperar 3 días después.
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>🐾 Protege a tu Mejor Amigo</h3>
+            <p style="margin: 1rem 0; font-size: 1.1rem;">Únete a Patitas y Mimos y recibe recordatorios personalizados de vacunación, descuentos en productos de salud y acceso a nuestra comunidad de cuidadores responsables.</p>
+            <a href="index.html#comunidad" class="cta-btn">¡Quiero Proteger a mi Perrito! 🛡️</a>
+        </div>
+
+        <div class="disclaimer">
+            <strong>⚠️ Descargo de Responsabilidad Médica:</strong> Este artículo es informativo y educacional. NO sustituye el consejo veterinario profesional. Los protocolos de vacunación deben ser personalizados por un veterinario colegiado según la salud individual de tu perro, historial, raza, edad, estilo de vida y riesgos regionales. Las leyes de vacunación varían por comunidad autónoma. Consulta siempre con tu veterinario de confianza.<br><br>
+            
+            <strong>🔗 Afiliados:</strong> Participamos en el Programa de Afiliados de Amazon EU. Si compras a través de nuestros enlaces, Patitas y Mimos recibe una pequeña comisión sin coste adicional para ti. Solo recomendamos productos que consideramos útiles para la salud de tu perrito. ¡Gracias por apoyarnos! 🐾
+        </div>
+
+    </article>
+
+    <footer style="background: var(--deep-brown); color: white; text-align: center; padding: 2rem;">
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Creando una comunidad de amor por los perritos 🐶</p>
+        <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 0.5rem;">
+            <a href="index.html" style="color: white;">Inicio</a> • 
+            <a href="#" style="color: white;">Política de Privacidad</a> • 
+            <a href="#" style="color: white;">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>

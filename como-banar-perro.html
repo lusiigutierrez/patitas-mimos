@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Bañar a tu Perro: Guía Completa | Patitas y Mimos</title>
+    <meta name="description" content="Guía actualizada: aprende a bañar a tu perro correctamente, productos eco-friendly, técnicas profesionales y frecuencia ideal según tipo de pelaje.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-pink: #FFB6C1;
+            --soft-pink: #FFD4E5;
+            --baby-blue: #B4D4FF;
+            --soft-blue: #D4E7FF;
+            --cream: #FFF9F0;
+            --light-pink: #FFF0F5;
+            --warm-brown: #8B6F47;
+            --deep-brown: #5D4E37;
+            --pastel-purple: #E6D5FF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--deep-brown);
+            line-height: 1.8;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--baby-blue) 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        article {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--baby-blue);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .article-meta {
+            color: var(--warm-brown);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        .article-meta span {
+            margin: 0 1rem;
+        }
+
+        .toc {
+            background: var(--soft-blue);
+            border-left: 4px solid var(--baby-blue);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .toc h2 {
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 0.8rem 0;
+        }
+
+        .toc a {
+            color: var(--warm-brown);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .toc a:hover {
+            color: var(--baby-blue);
+            transform: translateX(5px);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--baby-blue);
+            margin: 3rem 0 1.5rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--warm-brown);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 1.2rem 0;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--soft-blue);
+            border-left: 5px solid var(--baby-blue);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .tip-box {
+            background: #E8F5E9;
+            border-left: 5px solid #4CAF50;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            border-left: 5px solid #FFC107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .steps-container {
+            counter-reset: step-counter;
+            margin: 2rem 0;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            padding-left: 5rem;
+            border-left: 4px solid var(--baby-blue);
+        }
+
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            background: var(--baby-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .step h4 {
+            margin-top: 0;
+            color: var(--baby-blue);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid var(--soft-blue);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(180, 212, 255, 0.2);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h4 {
+            color: var(--baby-blue);
+            margin: 1rem 0 0.5rem;
+        }
+
+        .product-rating {
+            color: #FFD700;
+            margin: 0.5rem 0;
+        }
+
+        .amazon-btn {
+            background: var(--baby-blue);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .amazon-btn:hover {
+            background: var(--pastel-pink);
+            transform: scale(1.05);
+        }
+
+        .frequency-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .frequency-table th {
+            background: var(--baby-blue);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .frequency-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid var(--soft-blue);
+        }
+
+        .frequency-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ad-space {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
+            border: 2px dashed var(--pastel-pink);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ad-label {
+            color: var(--pastel-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--pastel-pink);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid var(--soft-pink);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--light-pink);
+        }
+
+        .faq {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-item {
+            margin: 1.5rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--soft-blue);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--baby-blue);
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: var(--warm-brown);
+            line-height: 1.7;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--baby-blue) 0%, var(--pastel-purple) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--baby-blue);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .disclaimer {
+            background: var(--light-pink);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            font-size: 0.9rem;
+            color: var(--warm-brown);
+            border-left: 3px solid var(--pastel-pink);
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin: 0.8rem 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            article {
+                padding: 0 1.5rem;
+            }
+
+            .step {
+                padding-left: 1.5rem;
+                padding-top: 3rem;
+            }
+
+            .step::before {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo-header-final.png" alt="Patitas y Mimos" class="logo-img">
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <article>
+        <div class="article-header">
+            <h1>🛁 Cómo Bañar a tu Perro: Guía Completa</h1>
+            <div class="article-meta">
+                <span>📅 Actualizado: Marzo 2026</span>
+                <span>⏱️ 15 min lectura</span>
+                <span>✍️ Equipo Patitas y Mimos</span>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>🌟 Novedades:</strong> Champús probióticos para microbioma de la piel, tendencia waterless (baño en seco eco-friendly), productos biodegradables sin microplásticos, y técnicas de grooming profesional adaptadas para casa. Todo actualizado con las últimas investigaciones dermatológicas caninas.
+        </div>
+
+        <div class="toc">
+            <h2>📑 Índice de Contenidos</h2>
+            <ul>
+                <li><a href="#antes-empezar">✅ Antes de Empezar: Preparación</a></li>
+                <li><a href="#frecuencia">📅 Frecuencia Ideal según Tipo de Pelaje</a></li>
+                <li><a href="#productos">🧴 Mejores Productos 2026</a></li>
+                <li><a href="#paso-paso">👣 Guía Paso a Paso</a></li>
+                <li><a href="#tecnicas-pelaje">✂️ Técnicas según Tipo de Pelaje</a></li>
+                <li><a href="#secado">💨 Secado Correcto</a></li>
+                <li><a href="#errores">❌ Errores Comunes a Evitar</a></li>
+                <li><a href="#alternativas">🌿 Alternativas Eco-Friendly</a></li>
+                <li><a href="#faq">❓ Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+
+        <h2 id="antes-empezar">✅ Antes de Empezar: Preparación Esencial</h2>
+
+        <p>Un baño exitoso empieza mucho antes de abrir el grifo. En 2026, sabemos que la preparación reduce el estrés tanto para ti como para tu perro, y mejora significativamente los resultados.</p>
+
+        <h3>🎒 Checklist: Lo que Necesitas Tener Preparado</h3>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">🧴</div>
+                <h4>Champú Específico</h4>
+                <p><strong>NUNCA champú humano</strong> - El pH de la piel canina (7.0-7.5) es diferente al humano (4.5-5.5)</p>
+                <ul>
+                    <li>✅ Champú canino según tipo de pelo</li>
+                    <li>✅ Acondicionador (opcional, pelo largo)</li>
+                    <li>✅ Champú medicinal si tiene problemas de piel</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🧽</div>
+                <h4>Herramientas de Baño</h4>
+                <ul>
+                    <li>✅ Cepillo para desenredar (ANTES del baño)</li>
+                    <li>✅ Guante de baño o esponja suave</li>
+                    <li>✅ Taza o jarra para enjuagar</li>
+                    <li>✅ Tapón de desagüe con filtro</li>
+                    <li>🆕: Cabezal de ducha canino ajustable</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🏖️</div>
+                <h4>Para el Secado</h4>
+                <ul>
+                    <li>✅ 2-3 toallas absorbentes grandes</li>
+                    <li>✅ Toalla de microfibra (seca más rápido)</li>
+                    <li>✅ Secador de pelo canino (temperatura baja)</li>
+                    <li>🆕: Toallas de bambú ultra-absorbentes</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🎁</div>
+                <h4>Motivación y Seguridad</h4>
+                <ul>
+                    <li>✅ Premios/snacks resistentes al agua</li>
+                    <li>✅ Juguete favorito (distracción)</li>
+                    <li>✅ Alfombrilla antideslizante para bañera</li>
+                    <li>✅ Algodones para proteger oídos</li>
+                    <li>✅ Tu ropa que pueda mojarse</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>💡 Consejo Pro:</strong> Cepilla a tu perro ANTES del baño. Los nudos mojados son casi imposibles de deshacer y pueden causar dolor. Dedica 10-15 minutos al cepillado pre-baño, especialmente en razas de pelo largo.
+        </div>
+
+        <h2 id="frecuencia">📅 Frecuencia Ideal según Tipo de Pelaje</h2>
+
+        <p>Uno de los mitos más comunes es que los perros necesitan baños semanales. <strong>ERROR.</strong> En 2026, sabemos que bañar demasiado elimina los aceites naturales protectores de la piel, causando sequedad, irritación y problemas dermatológicos.</p>
+
+        <table class="frequency-table">
+            <thead>
+                <tr>
+                    <th>Tipo de Pelaje</th>
+                    <th>Ejemplos de Razas</th>
+                    <th>Frecuencia Recomendada</th>
+                    <th>Notas Especiales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pelo Corto y Liso</strong></td>
+                    <td>Beagle, Dálmata, Boxer, Bull Terrier</td>
+                    <td>Cada 2-3 meses</td>
+                    <td>Baños poco frecuentes. Cepillado semanal suficiente.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pelo Corto y Denso</strong></td>
+                    <td>Labrador, Golden (algunos), Rottweiler</td>
+                    <td>Cada 6-8 semanas</td>
+                    <td>Doble capa: cepillado frecuente, baños moderados.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pelo Largo y Sedoso</strong></td>
+                    <td>Yorkshire, Shih Tzu, Maltés, Afghan Hound</td>
+                    <td>Cada 3-4 semanas</td>
+                    <td>Requiere acondicionador. Cepillado diario esencial.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pelo Rizado/Lanoso</strong></td>
+                    <td>Caniche, Bichón, Podenco Ibicenco</td>
+                    <td>Cada 4-6 semanas</td>
+                    <td>Champú hidratante. Secado completo para evitar hongos.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pelo Duro/Áspero</strong></td>
+                    <td>Schnauzer, Terriers, Jack Russell</td>
+                    <td>Cada 2-3 meses</td>
+                    <td>Stripping profesional 2-3 veces/año. Baños espaciados.</td>
+                </tr>
+                <tr>
+                    <td><strong>Doble Capa Densa</strong></td>
+                    <td>Husky, Samoyedo, Chow Chow</td>
+                    <td>Cada 8-12 semanas</td>
+                    <td>⚠️ NUNCA rapar. Baños profundos con deslanado previo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <strong>⚠️ EXCEPCIONES - Baña antes si:</strong>
+            <ul>
+                <li>Se revolcó en algo maloliente o sucio</li>
+                <li>Tiene parásitos (pulgas, garrapatas) - usar champú antiparasitario</li>
+                <li>Problemas de piel - sigue indicaciones veterinarias (puede ser 1-2 veces/semana con champú medicado)</li>
+                <li>Después de nadar en agua salada o con cloro</li>
+            </ul>
+        </div>
+
+        <h2 id="productos">🧴 Mejores Productos para Baño Canino 2026</h2>
+
+        <h3>Champús Premium Recomendados</h3>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">🌿</div>
+                <h4>Champú Natural Hipoalergénico</h4>
+                <div class="product-rating">⭐⭐⭐⭐⭐ 4.8/5</div>
+                <p><strong>Marca:</strong> Paws & Pals Organic 2026</p>
+                <p><strong>Para:</strong> Pieles sensibles, alergias</p>
+                <ul>
+                    <li>✅ Sin parabenos, sulfatos, fragancias artificiales</li>
+                    <li>✅ Avena coloidal + aloe vera</li>
+                    <li>🆕 Certificado biodegradable</li>
+                </ul>
+                <p style="color: var(--baby-blue); font-weight: 600;">€15-20 (500ml)</p>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🦠</div>
+                <h4>Champú Probiótico Avanzado</h4>
+                <div class="product-rating">⭐⭐⭐⭐⭐ 4.9/5</div>
+                <p><strong>Novedad:</strong> Microbioma de la piel</p>
+                <p><strong>Para:</strong> Equilibrio bacteriano, piel sana</p>
+                <ul>
+                    <li>✅ Probióticos vivos para microbioma</li>
+                    <li>✅ pH balanceado 7.0-7.5</li>
+                    <li>🆕 Tecnología skin-barrier protection</li>
+                </ul>
+                <p style="color: var(--baby-blue); font-weight: 600;">€22-28 (400ml)</p>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">✨</div>
+                <h4>Champú + Acondicionador 2en1</h4>
+                <div class="product-rating">⭐⭐⭐⭐ 4.6/5</div>
+                <p><strong>Para:</strong> Pelo largo, desenredante</p>
+                <ul>
+                    <li>✅ Ahorra tiempo y agua</li>
+                    <li>✅ Aceite de coco + manteca de karité</li>
+                    <li>✅ Brillo y suavidad</li>
+                </ul>
+                <p style="color: var(--baby-blue); font-weight: 600;">€18-24 (500ml)</p>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">💊</div>
+                <h4>Champú Medicado Antiseborreico</h4>
+                <div class="product-rating">⭐⭐⭐⭐⭐ 4.7/5</div>
+                <p><strong>Para:</strong> Problemas dermatológicos</p>
+                <ul>
+                    <li>✅ Prescripción veterinaria (algunos)</li>
+                    <li>✅ Clorhexidina o ketoconazol</li>
+                    <li>✅ Combate hongos y bacterias</li>
+                </ul>
+                <p style="color: var(--baby-blue); font-weight: 600;">€16-25 (250ml)</p>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+        </div>
+
+        <h3>Herramientas Esenciales de Baño</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Función</th>
+                    <th>Recomendación 2026</th>
+                    <th>Precio</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Cabezal de Ducha Canino</strong></td>
+                    <td>Enjuague profundo y rápido</td>
+                    <td>Modelo con 8 modos de presión, manguera 2.5m</td>
+                    <td>€25-35</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Cepillo de Baño Dispensador</strong></td>
+                    <td>Distribuye champú mientras masajeas</td>
+                    <td>Silicona médica, dispensador integrado</td>
+                    <td>€12-18</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Alfombrilla Antideslizante</strong></td>
+                    <td>Seguridad en bañera/ducha</td>
+                    <td>Goma natural, con ventosas, 80x40cm</td>
+                    <td>€15-22</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Toalla de Microfibra XXL</strong></td>
+                    <td>Absorbe 5x más que toalla normal</td>
+                    <td>🆕 Bambú+microfibra, antibacteriana</td>
+                    <td>€18-28</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Secador Canino</strong></td>
+                    <td>Secado rápido, bajo ruido</td>
+                    <td>Velocidad variable, filtro HEPA, silencioso (<60dB)</td>
+                    <td>€45-80</td>
+                    <td><a href="#" class="amazon-btn">Amazon</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Ad Space 1 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="paso-paso">👣 Guía Paso a Paso: Baño Perfecto 2026</h2>
+
+        <div class="steps-container">
+            <div class="step">
+                <h4>Cepillado Pre-Baño (10-15 min)</h4>
+                <p>Elimina pelo muerto, nudos y suciedad superficial. Esto es <strong>CRÍTICO</strong> - los nudos mojados son imposibles de deshacer.</p>
+                <ul>
+                    <li>✅ Cepilla en dirección del crecimiento del pelo</li>
+                    <li>✅ Presta atención a axilas, detrás orejas, zona genital</li>
+                    <li>✅ Usa cepillo slicker para nudos, peine metálico para verificar</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Preparar el Espacio</h4>
+                <ul>
+                    <li>✅ Coloca alfombrilla antideslizante en bañera</li>
+                    <li>✅ Ajusta temperatura del agua: <strong>tibia</strong> (36-38°C, como temperatura corporal)</li>
+                    <li>✅ Ten todos los productos al alcance</li>
+                    <li>✅ Cierra puertas (evita escape post-baño)</li>
+                    <li>✅ Pon música relajante (sí, funciona)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Mojar Completamente (3-5 min)</h4>
+                <p><strong>Novedad:</strong> Técnica de "cascada controlada" reduce estrés.</p>
+                <ul>
+                    <li>✅ Empieza por las patas traseras (menos amenazante)</li>
+                    <li>✅ Sube gradualmente a lomo, pecho, patas delanteras</li>
+                    <li>✅ CABEZA AL FINAL, con cuidado de ojos y oídos</li>
+                    <li>✅ Usa presión suave, nunca directa a la cara</li>
+                    <li>✅ Habla con voz calmada y positiva</li>
+                    <li>⚠️ Evita que entre agua en oídos (usa algodones)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Aplicar Champú (5-7 min)</h4>
+                <p>Diluye el champú con agua (1:1 o 1:2) para mejor distribución.</p>
+                <ul>
+                    <li>✅ Aplica primero en lomo y distribúyelo</li>
+                    <li>✅ Masajea con movimientos circulares (no frotar agresivamente)</li>
+                    <li>✅ Trabaja el champú hasta la piel, no solo el pelo superficial</li>
+                    <li>✅ Zonas clave: cuello, pecho, patas, barriga, cola, trasero</li>
+                    <li>✅ Cara: usa esponja húmeda o paño, NUNCA champú directo en ojos</li>
+                    <li>🆕: Masaje probiótico - deja actuar 2-3 min</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Enjuague Completo (5-10 min)</h4>
+                <p>Este es el paso MÁS IMPORTANTE. Residuos de champú causan picazón e irritación.</p>
+                <ul>
+                    <li>✅ Enjuaga COMPLETAMENTE - más tiempo del que crees necesario</li>
+                    <li>✅ Orden: lomo → lados → patas → barriga → cola → cabeza</li>
+                    <li>✅ Pasa la mano por el pelaje - debe "chirriar" al estar limpio</li>
+                    <li>✅ Zonas difíciles: axilas, entre dedos, genitales</li>
+                    <li>✅ Test final: pasa toalla blanca - no debe quedar espuma</li>
+                    <li>⚠️ Razas de doble capa: enjuague extra largo</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Acondicionador (Opcional - 3 min)</h4>
+                <p>Solo para pelo largo, rizado o muy seco.</p>
+                <ul>
+                    <li>✅ Diluir también (más líquido que el champú)</li>
+                    <li>✅ Aplicar de medios a puntas (evita raíces)</li>
+                    <li>✅ Dejar actuar 2-3 minutos</li>
+                    <li>✅ Enjuagar bien (no tanto como champú)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Escurrido Inicial</h4>
+                <ul>
+                    <li>✅ Pasa las manos por el pelaje "escurriendo" el exceso de agua</li>
+                    <li>✅ Patas, cola, orejas - escurre suavemente</li>
+                    <li>✅ Esto reduce el "shake off" explosivo</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Secado con Toalla (5-10 min)</h4>
+                <p><strong>Técnica de "prensado"</strong> - más efectiva que frotar.</p>
+                <ul>
+                    <li>✅ Envuelve en toalla y PRESIONA (no frotes violentamente)</li>
+                    <li>✅ Primera toalla: absorbe 70% del agua</li>
+                    <li>✅ Segunda toalla: acabado</li>
+                    <li>✅ Toalla microfibra: pelo largo/rizado</li>
+                    <li>🆕 Albornoz canino post-baño - mantiene calor</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="secado">💨 Secado Correcto: Clave para Piel Sana</h2>
+
+        <div class="warning-box">
+            <strong>⚠️ CRÍTICO:</strong> Pelo húmedo prolongado = hongos, mal olor, infecciones de piel. Especialmente en razas de doble capa, pliegues cutáneos, y orejas caídas.
+        </div>
+
+        <h3>Métodos de Secado</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Mejor Para</th>
+                    <th>Pros</th>
+                    <th>Contras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Aire Natural</strong></td>
+                    <td>Pelo corto, clima cálido</td>
+                    <td>Sin estrés, gratis</td>
+                    <td>Lento (2-4h), riesgo de hongos en pelo largo</td>
+                </tr>
+                <tr>
+                    <td><strong>Secador Canino</strong></td>
+                    <td>Pelo largo, doble capa</td>
+                    <td>Rápido, secado completo</td>
+                    <td>Puede asustar, necesita entrenamiento</td>
+                </tr>
+                <tr>
+                    <td><strong>Secador Humano</strong></td>
+                    <td>Emergencia, pelo corto</td>
+                    <td>Ya lo tienes en casa</td>
+                    <td>Temperatura alta (puede quemar), ruido fuerte</td>
+                </tr>
+                <tr>
+                    <td><strong>🆕 Secador Silencioso</strong></td>
+                    <td>Perros miedosos</td>
+                    <td><60dB, varias velocidades, frío/tibio</td>
+                    <td>Más caro (€60-100)</td>
+                </tr>
+                <tr>
+                    <td><strong>🆕 Box de Secado</strong></td>
+                    <td>Múltiples perros, profesional</td>
+                    <td>Manos libres, uniforme</td>
+                    <td>Costoso (€200+), espacio</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Técnica de Secado con Secador</h3>
+
+        <ul>
+            <li>✅ <strong>Distancia:</strong> 20-30cm del cuerpo</li>
+            <li>✅ <strong>Temperatura:</strong> Tibia o fría (NUNCA caliente)</li>
+            <li>✅ <strong>Movimiento:</strong> Constante, no fijo en un punto</li>
+            <li>✅ <strong>Dirección:</strong> A favor del crecimiento del pelo</li>
+            <li>✅ <strong>Orden:</strong> Lomo → lados → patas → barriga → cola → cabeza/orejas</li>
+            <li>✅ <strong>Zonas críticas:</strong> Entre dedos, axilas, pliegues de piel, detrás de orejas</li>
+            <li>✅ <strong>Cepillado simultáneo:</strong> Pelo largo - cepilla mientras secas</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>💡 Desensibilización al Secador (Entrenamiento 2026):</strong>
+            <ol>
+                <li>Semana 1: Encender secador en otra habitación, premiar calma</li>
+                <li>Semana 2: Secador encendido cerca (apagado), premios + juego</li>
+                <li>Semana 3: Secador a distancia mientras come</li>
+                <li>Semana 4: Acercar progresivamente, aire en patas (no cara)</li>
+                <li>Semana 5+: Secado completo con premios frecuentes</li>
+            </ol>
+        </div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="tecnicas-pelaje">✂️ Técnicas Específicas según Tipo de Pelaje</h2>
+
+        <h3>🐕 Pelo Corto (Beagle, Boxer, Dálmata)</h3>
+        <ul>
+            <li>✅ Champú suave, baños espaciados (2-3 meses)</li>
+            <li>✅ Cepillado con guante de goma antes y después</li>
+            <li>✅ Secado rápido con toalla (aire natural OK)</li>
+            <li>✅ No necesita acondicionador</li>
+        </ul>
+
+        <h3>🐩 Pelo Rizado (Caniche, Bichón)</h3>
+        <ul>
+            <li>✅ Champú + acondicionador hidratante obligatorio</li>
+            <li>✅ Cepillado pre-baño EXHAUSTIVO (nudos imposibles mojados)</li>
+            <li>✅ Secado completo con secador + cepillo slicker</li>
+            <li>✅ Peluquería profesional cada 6-8 semanas</li>
+            <li>🆕: Champú con aceite de argán para definición de rizos</li>
+        </ul>
+
+        <h3>🦁 Doble Capa Densa (Husky, Samoyedo, Chow Chow)</h3>
+        <ul>
+            <li>✅ Deslanado/cepillado profundo ANTES del baño (30-60 min)</li>
+            <li>✅ Champú específico para doble capa</li>
+            <li>✅ Enjuague EXTRA largo (agua debe llegar a la piel)</li>
+            <li>✅ Secado completo obligatorio (riesgo de hongos)</li>
+            <li>✅ Secador de alta velocidad para penetrar capas</li>
+            <li>⚠️ NUNCA rapar - doble capa regula temperatura</li>
+        </ul>
+
+        <h3>✨ Pelo Largo y Sedoso (Yorkshire, Shih Tzu, Maltés)</h3>
+        <ul>
+            <li>✅ Desenredar completamente pre-baño</li>
+            <li>✅ Champú suave + acondicionador con silicona (brillo)</li>
+            <li>✅ Enjuague meticuloso</li>
+            <li>✅ Secado con secador + cepillado continuo</li>
+            <li>✅ Spray desenredante post-baño</li>
+            <li>🆝: Aceites de acabado (argán, jojoba)</li>
+        </ul>
+
+        <h3>🔧 Pelo Duro (Schnauzer, Terriers)</h3>
+        <ul>
+            <li>✅ Baños muy espaciados (cada 2-3 meses)</li>
+            <li>✅ Champú texturizante para mantener aspereza</li>
+            <li>✅ NO usar acondicionador (ablanda demasiado)</li>
+            <li>✅ Stripping profesional 2-3 veces/año</li>
+            <li>✅ Secado con toalla principalmente</li>
+        </ul>
+
+        <h2 id="errores">❌ Errores Comunes que Debes Evitar</h2>
+
+        <div class="warning-box">
+            <h3>Los 10 Errores Más Frecuentes en 2026</h3>
+            <ol style="line-height: 2;">
+                <li><strong>Usar champú humano</strong> - Daña el pH de la piel (picazón, sequedad)</li>
+                <li><strong>Agua demasiado caliente</strong> - Quema piel, aumenta estrés</li>
+                <li><strong>Bañar con nudos</strong> - Se aprietan y son imposibles de quitar</li>
+                <li><strong>Enjuague insuficiente</strong> - Principal causa de irritación post-baño</li>
+                <li><strong>Meter agua en oídos</strong> - Infecciones de oído recurrentes</li>
+                <li><strong>Secado incompleto</strong> - Hongos, mal olor, hot spots</li>
+                <li><strong>Secador muy caliente o cerca</strong> - Quemaduras en piel</li>
+                <li><strong>Bañar demasiado frecuente</strong> - Elimina aceites protectores</li>
+                <li><strong>Champú directo en cara</strong> - Irritación de ojos</li>
+                <li><strong>Baño inmediato tras vacuna</strong> - Esperar 48-72h</li>
+            </ol>
+        </div>
+
+        <h2 id="alternativas">🌿 Alternativas Eco-Friendly y Baño en Seco 2026</h2>
+
+        <h3>Tendencia: Baño sin Agua (Waterless Bathing)</h3>
+
+        <p>Perfecto para perros que odian el agua, climas fríos, perros senior/enfermos, o cuando necesitas refrescar entre baños completos.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">💨</div>
+                <h4>Champú en Seco</h4>
+                <p><strong>Novedad:</strong> Fórmulas con probióticos</p>
+                <ul>
+                    <li>✅ Spray o espuma</li>
+                    <li>✅ Aplicar, masajear, cepillar</li>
+                    <li>✅ Absorbe grasa y olores</li>
+                    <li>✅ No reemplaza baño completo</li>
+                </ul>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🧻</div>
+                <h4>Toallitas Biodegradables</h4>
+                <p><strong>Eco:</strong> Sin microplásticos</p>
+                <ul>
+                    <li>✅ Patas sucias post-paseo</li>
+                    <li>✅ Refrescar cara y trasero</li>
+                    <li>✅ Hipoalergénicas</li>
+                    <li>🆕 Compostables 100%</li>
+                </ul>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🌱</div>
+                <h4>Spray Desodorante Natural</h4>
+                <ul>
+                    <li>✅ Entre baños</li>
+                    <li>✅ Aceites esenciales seguros</li>
+                    <li>✅ Sin alcohol</li>
+                    <li>✅ Olor fresco días</li>
+                </ul>
+                <a href="#" class="amazon-btn">Ver en Amazon</a>
+            </div>
+        </div>
+
+        <h3>Productos Eco-Friendly</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Característica Eco</th>
+                    <th>Beneficio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Champú Sólido (barra)</strong></td>
+                    <td>Sin envase plástico, concentrado</td>
+                    <td>1 barra = 3 botellas líquidas. Viajes friendly.</td>
+                </tr>
+                <tr>
+                    <td><strong>Champú Recargable</strong></td>
+                    <td>Sistema de recargas</td>
+                    <td>Reduce residuos plásticos 90%</td>
+                </tr>
+                <tr>
+                    <td><strong>Toallas de Bambú</strong></td>
+                    <td>Bambú sostenible, antibacteriano natural</td>
+                    <td>Absorbe más, seca rápido, dura años</td>
+                </tr>
+                <tr>
+                    <td><strong>Cepillos Biodegradables</strong></td>
+                    <td>Madera + cerdas naturales</td>
+                    <td>Compostables al final de vida útil</td>
+                </tr>
+                <tr>
+                    <td><strong>Sistemas de Reciclaje de Agua</strong></td>
+                    <td>🆕 Filtran y reutilizan agua del baño</td>
+                    <td>Ahorro 60% de agua. Innovación 2026.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Ad Space 3 -->
+        <div class="ad-space">
+            <p class="ad-label">Espacio Publicitario</p>
+            <p style="color: var(--warm-brown); margin-top: 1rem;">Google AdSense - Zona Premium</p>
+        </div>
+
+        <h2 id="faq">❓ Preguntas Frecuentes</h2>
+
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo usar mi champú o gel de ducha en mi perro?</div>
+                <div class="faq-answer">
+                    <strong>NO.</strong> El pH de la piel humana es ácido (4.5-5.5), mientras que la piel canina es más neutra (7.0-7.5). Usar productos humanos altera su barrera protectora natural, causando sequedad, picazón, irritación y aumentando riesgo de infecciones. SIEMPRE usa champú específico canino.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Mi perro odia el baño. ¿Cómo hago que sea menos estresante?</div>
+                <div class="faq-answer">
+                    <strong>Estrategia de desensibilización:</strong>
+                    <ul>
+                        <li>✅ Empieza fuera del baño: premios por entrar al baño</li>
+                        <li>✅ Baño seco: meterse en bañera vacía = premio</li>
+                        <li>✅ Agua gradual: mojar solo patas primero</li>
+                        <li>✅ Asociación positiva: Kong relleno durante el baño</li>
+                        <li>✅ Sesiones cortas (5-10 min) e ir aumentando</li>
+                        <li>✅ Nunca forzar - paciencia de semanas</li>
+                        <li>🆕 Música para perros (Spotify tiene playlists específicas)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Es seguro bañar a un cachorro? ¿A partir de qué edad?</div>
+                <div class="faq-answer">
+                    Puedes bañar a un cachorro desde las <strong>8 semanas</strong> (tras segunda vacuna y con veterinario OK). Antes de eso, usa toallitas húmedas si se ensucian. Baños de cachorro: agua tibia, champú suave para cachorros, muy breve (5-7 min), secar completamente (son más sensibles al frío). Frecuencia: solo cuando realmente necesite, no por rutina.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo bañar a mi perra en celo o embarazada?</div>
+                <div class="faq-answer">
+                    <strong>En celo:</strong> SÍ, pero con cuidado extra de higiene (zona genital). Útil para controlar olor.<br>
+                    <strong>Embarazada:</strong> SÍ, pero:<br>
+                    - Consulta veterinario si embarazo complicado<br>
+                    - Agua tibia, no caliente<br>
+                    - Apoyo bajo vientre al entrar/salir bañera<br>
+                    - Último trimestre: considera baño en seco<br>
+                    - Evitar estrés innecesario<br>
+                    - No bañar 1 semana antes/después del parto
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué hago si le entra agua en los oídos?</div>
+                <div class="faq-answer">
+                    <strong>Prevención:</strong> Algodones en oídos durante baño (no muy profundo).<br>
+                    <strong>Si entró agua:</strong><br>
+                    1. Inclina cabeza hacia lado afectado<br>
+                    2. Seca suavemente con gasa o algodón (NO hisopos)<br>
+                    3. Solución secante de oídos (venta en veterinaria)<br>
+                    4. Vigila 24-48h: si sacude cabeza mucho, rascado excesivo, olor → veterinario<br>
+                    🆕: Limpiadores de oídos con probióticos post-baño
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Los perros necesitan protector solar después del baño?</div>
+                <div class="faq-answer">
+                    <strong>Sí, en algunos casos:</strong> Perros de piel clara, sin pelo (Xoloitzcuintle, Chinese Crested), razas con nariz rosada (Bulldogs, algunos Pitbulls), y después de raparlos. Aplica protector solar canino (NO humano - contiene zinc/óxido de zinc tóxico) en: nariz, orejas, barriga si es rosa. Marcas: Epi-Pet, Petkin. Especialmente importante en verano.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto cuesta un baño profesional vs. hacerlo en casa?</div>
+                <div class="faq-answer">
+                    <strong>Peluquería canina:</strong> €25-60 según tamaño y pelo (incluye baño, secado, cepillado, corte uñas). Perros grandes o pelo difícil: hasta €80-100.<br>
+                    <strong>Hacerlo en casa:</strong> Inversión inicial €50-100 (champú, toallas, secador), luego €5-15 por baño (productos). <strong>Ahorro anual:</strong> €200-500 si bañas en casa. Considera: tiempo (1-2h), espacio, comodidad vs. profesionalismo de groomer.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo usar aceites esenciales en el baño de mi perro?</div>
+                <div class="faq-answer">
+                    <strong>CON MUCHO CUIDADO.</strong> Los perros tienen olfato 40x más sensible. Aceites esenciales pueden ser tóxicos si se ingieren (se lamen). <strong>Seguros en dilución extrema:</strong> lavanda, manzanilla (calmantes). <strong>NUNCA:</strong> tea tree, eucalipto, citronela, canela, clavo, pino. <strong>Mejor opción:</strong> Champús con hidrolatos (agua floral) en lugar de aceites esenciales puros. Consulta veterinario holístico antes de usar.
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>🐾 ¿Quieres Ser un Experto en Cuidado Canino?</h3>
+            <p style="margin: 1rem 0; font-size: 1.1rem;">Únete a Patitas y Mimos y recibe guías exclusivas, descuentos en productos premium y consejos personalizados para tu perrito.</p>
+            <a href="index.html#comunidad" class="cta-btn">¡Suscribirme Gratis! 🎁</a>
+        </div>
+
+        <div class="disclaimer">
+            <strong>⚠️ Descargo de Responsabilidad:</strong> Este artículo es informativo y no sustituye consejo veterinario profesional. Si tu perro tiene problemas de piel, alergias, o condiciones médicas, consulta con tu veterinario antes de cambiar productos o rutinas de baño. Cada perro es único.<br><br>
+            
+            <strong>🔗 Afiliados:</strong> Participamos en el Programa de Afiliados de Amazon EU. Si compras a través de nuestros enlaces, Patitas y Mimos recibe una pequeña comisión sin coste adicional para ti. Solo recomendamos productos que hemos investigado o usaríamos para nuestros propios perritos. ¡Gracias por apoyarnos! 🐾
+        </div>
+
+    </article>
+
+    <footer style="background: var(--deep-brown); color: white; text-align: center; padding: 2rem;">
+        <p style="opacity: 0.8;">© 2026 Patitas y Mimos - Creando una comunidad de amor por los perritos 🐶</p>
+        <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 0.5rem;">
+            <a href="index.html" style="color: white;">Inicio</a> • 
+            <a href="#" style="color: white;">Política de Privacidad</a> • 
+            <a href="#" style="color: white;">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>
